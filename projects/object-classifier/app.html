@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+  <title>Object Classifier</title>
+  <meta name="description" content="Object Classifier">
+  <meta name="author" content="Adar Kahiri">
+
+
+  <link rel="stylesheet" href="app.css">
+  <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css"  media="screen,projection"/>
+</head>
+
+<body>
+    <nav>
+        <div class='nav-wrapper'>
+            <a href="http://adarkahiri.com" class="brand-logo center">Adar Kahiri</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h3 class="center">Live Object Classification</h3>
+        <h4>Overview</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquam varius ipsum eu aliquam. Nulla et euismod purus. 
+           Praesent vel efficitur eros. Donec at tempor metus. Vestibulum egestas purus neque, eget bibendum ligula mattis quis. 
+           Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus luctus dui at velit ultricies vulputate. 
+           Sed et nisi metus. Cras tristique quis dui ullamcorper efficitur.</p> <br>
+
+        <h4 class="inline-w-header">Demo</h4>
+        <button id="camera--trigger" class=" center waves-effect waves-light btn ">Open Camera</button>
+
+        <!-- Camera -->
+        <main id="camera" class="center">
+            <!-- Camera sensor -->
+            <!-- Camera view -->
+            <video id="camera--view" autoplay playsinline></video>
+            <!-- Camera output -->
+            <img src="//:0" alt="" id="camera--output">
+            <!-- Camera trigger -->
+
+            <p id="output"></p>
+        </main>
+    </div>
+</body>
+
+<script type="text/javascript" src="materialize/js/materialize.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+</html>
