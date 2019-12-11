@@ -28,10 +28,21 @@ document.getElementById('output').innerHTML = "Cat";
     4. Display output in 'output' variable. 
 */
 
+function runModel () {
+    const img = document.getElementById('camera--view')
+    //Load model 
+    mobilenet.load().then(model => {
+        //Classify image
+        model.classify(img).then(predictions => {
+            document.getElementById('output').innerHTML = predictions;
+        }); 
+    });
+}
 
 
 
 cameraTrigger.onclick = function() { //Start camera and load model when button pressed
     cameraStart(); 
+    runModel(); 
 }; 
 
