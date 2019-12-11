@@ -1,3 +1,5 @@
+import * as mobilenet from '@tensorflow-models/mobilenet';
+
 // Set constraints for the video stream
 var constraints = { video: { facingMode: "user" }, audio: false };
 // Define constants
@@ -19,27 +21,17 @@ function cameraStart() {
 }
 document.getElementById('output').innerHTML = "Cat";
 
-
-/* DO ML SHIT HERE
-
-    1. Preprocess input from camera (update every 1000ms)
-    2. Put into model
-    3. Get output
-    4. Display output in 'output' variable. 
-*/
-
 function runModel () {
-    const img = document.getElementById('camera--view')
+    //Get current image
+    const img = document.getElementById('camera--view'); 
     //Load model 
-    mobilenet.load().then(model => {
-        //Classify image every second
-        setInterval(function(){
-            model.classify(img).then(predictions => {
-                console.log(predictions)
-                document.getElementById('output').innerHTML = predictions;
-            }); 
-        }, 1000); 
-    });
+    const model = await mobilenet.load(); 
+
+    setInterval(function() {
+        var predictions = await model.classify(img); 
+        console.log(predictions); 
+        document.getElementById('output').innerHTML = predictions; 
+    }); 
 }
 
 
