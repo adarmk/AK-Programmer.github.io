@@ -32,10 +32,13 @@ function runModel () {
     const img = document.getElementById('camera--view')
     //Load model 
     mobilenet.load().then(model => {
-        //Classify image
-        model.classify(img).then(predictions => {
-            document.getElementById('output').innerHTML = predictions;
-        }); 
+        //Classify image every second
+        setInterval(function(){
+            model.classify(img).then(predictions => {
+                console.log(predictions)
+                document.getElementById('output').innerHTML = predictions;
+            }); 
+        }, 1000); 
     });
 }
 
