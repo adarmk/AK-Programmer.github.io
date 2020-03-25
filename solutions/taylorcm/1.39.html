@@ -33,14 +33,13 @@
 
     The force in the z direction would be zero. Here is a diagram to better explain this relationship: <br><br>
     </p>
-    <img src="./1.39 diagram.JPG" alt="" style="max-width: 500px; display: block; margin-left: auto; margin-right: auto"> <br><br>
+    <img src="./1.39 diagram.JPG" alt="" style="max-width: 450px; display: block; margin-left: auto; margin-right: auto"> <br><br>
     Since we're interested in the ball's position as a function of time, we need to isolate acceleration in the equations above and then integrate twice. Note 
     that the constant produced by the first integral is the initial velocity in the x direction, or \(v_o \cos\theta\), and the constant produced by the second integral is the initial 
-    position in the x-direction, or zero. Also note that variables containing either \(x\) or \(y\) denote functions of time.
+    position in the x-direction, or zero. Also note that variables referring to acceleration, velocity, or position denote functions of time.
     
     <p>
         \[F_x=-mg\sin\phi\]
-        \[m\ddot{x}=-mg\sin\phi\]
         \[\ddot{x}=-g\sin\phi\]
         \[\int \ddot{x}dt = \int -g\sin\phi dt\]
         \[\dot{x}= -g\sin\phi t + v_o \cos\theta\]
@@ -51,7 +50,6 @@
     <p>Now we can do the same for position in the y-direction.</p>
     <p>
         \[F_y=-mg\cos\phi\]
-        \[m\ddot{y}=-mg\cos\phi\]
         \[\ddot{y}=-g\cos\phi\]
         \[\int \ddot{y}dt = \int -g\cos\phi dt\]
         \[\dot{y}= -g\cos\phi t + v_o \sin\theta\]
@@ -60,7 +58,7 @@
 
         Based on the information given, we can't determine the ball's position in the z direction. Fortunately, it's not relevant to other parts of the question. <br> <br>
 
-        The next part of the question is asking us to show that the distance from the ball's launch point at which it lands can be modelled by the equation 
+        The next part of the question is asking us to show that the distance from the ball's launch point to the point at which it lands can be modelled by the equation 
 
         \[R=\frac{2v_o^2\sin\theta\cos(\theta+\phi)}{g\cos^2\phi}\]
 
@@ -87,6 +85,33 @@
 
         Using one of the sum of angles identities, we get 
         \[x= \frac{2v_o^2 \sin \theta \cos(\theta + \phi)}{g \cos^2 \phi}\]
+
+        The final part of the question asks us to find the maximum distance in the x-direction a ball can be thrown given \(v_o\) and \(\phi\). Considering that we are given 
+        \(v_o\) and \(\phi\), we know that the previous result will be a simple sinusoidal function. That means that we can determine its maximum point by finding and setting its derivative
+        to 0.
+        
+        First, let's find the derivative with respect to \(\theta\) (since that's the only variable we're dealing with here): 
+        \[\frac{dx}{d\theta} = \frac{d}{d\theta}\frac{2v_o^2 \sin \theta \cos(\theta + \phi)}{g \cos^2 \phi}\]
+        \[\frac{dx}{d\theta} = \frac{2v_o^2 (\cos\theta\cos(\theta + \phi) - \sin\theta \sin(\theta + \phi)}{g \cos^2 \phi}\]
+        \[\frac{dx}{d\theta} = \frac{2v_o^2 (\cos\theta\cos(\theta + \phi) - \sin\theta \sin(\theta + \phi)}{g \cos^2 \phi}\]
+        \[\frac{dx}{d\theta} = \frac{2v_o^2 \cos(\theta + \theta + \phi)}{g \cos^2 \phi}\]
+        \[\frac{dx}{d\theta} = \frac{2v_o^2 \cos(2\theta + \phi)}{g \cos^2 \phi}\]
+
+        Now, since we're looking for a point at which \(\frac{dx}{d\theta}\) is equal to 0, and we know that \(\cos\frac{\pi}{2} = 0 \),
+        all we need to do is set \(2\theta + \phi = \frac{\pi}{2}\) and solve for \(\theta\). By doing this, we find that 
+        \[\theta = \frac{\pi}{4} -\frac{\phi}{2}\]
+
+        Now we can plug this value into our function \(x\) to find the maximum value. 
+
+        \[x= \frac{2v_o^2 \sin \theta \cos(\theta + \phi)}{g \cos^2 \phi}\]
+        \[x= \frac{2v_o^2 \sin(\frac{\pi}{4} -\frac{\phi}{2}) \cos[(\frac{\pi}{4} -\frac{\phi}{2}) + \phi]}{g \cos^2 \phi}\]
+        \[x= \frac{2v_o^2 \sin(\frac{\pi}{4} -\frac{\phi}{2}) \cos(\frac{\pi}{4} +\frac{\phi}{2})}{g \cos^2 \phi}\]
+
+        Using a product identity, we get: 
+        \[x= \frac{2v_o^2 \frac{1}{2}[ \sin(\frac{\pi}{2}) - \sin(\phi)] }{g \cos^2 \phi}\]
+        \[x= \frac{v_o^2[ 1 - \sin(\phi)] }{g (1 - \sin\phi)(1 + \sin\phi)}\]
+        \[x= \frac{v_o^2}{g(1 + \sin\phi)}\]
+
 
 
     </p>
