@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Problem 1.7</title>
+    <title>Problem 1.39</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async
           src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
@@ -88,12 +88,12 @@
 
         The final part of the question asks us to find the maximum distance in the x-direction a ball can be thrown given \(v_o\) and \(\phi\). Considering that we are given 
         \(v_o\) and \(\phi\), we know that the previous result will be a simple sinusoidal function. That means that we can determine its maximum point by finding and setting its derivative
-        to 0.
+        to 0. <br> <br>
         
         First, let's find the derivative with respect to \(\theta\) (since that's the only variable we're dealing with here): 
         \[\frac{dx}{d\theta} = \frac{d}{d\theta}\frac{2v_o^2 \sin \theta \cos(\theta + \phi)}{g \cos^2 \phi}\]
-        \[\frac{dx}{d\theta} = \frac{2v_o^2 (\cos\theta\cos(\theta + \phi) - \sin\theta \sin(\theta + \phi)}{g \cos^2 \phi}\]
-        \[\frac{dx}{d\theta} = \frac{2v_o^2 (\cos\theta\cos(\theta + \phi) - \sin\theta \sin(\theta + \phi)}{g \cos^2 \phi}\]
+        \[\frac{dx}{d\theta} = \frac{2v_o^2 [\cos\theta\cos(\theta + \phi) - \sin\theta \sin(\theta + \phi)]}{g \cos^2 \phi}\]
+        \[\frac{dx}{d\theta} = \frac{2v_o^2 [\cos\theta\cos(\theta + \phi) - \sin\theta \sin(\theta + \phi)]}{g \cos^2 \phi}\]
         \[\frac{dx}{d\theta} = \frac{2v_o^2 \cos(\theta + \theta + \phi)}{g \cos^2 \phi}\]
         \[\frac{dx}{d\theta} = \frac{2v_o^2 \cos(2\theta + \phi)}{g \cos^2 \phi}\]
 
