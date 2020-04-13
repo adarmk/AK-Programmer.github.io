@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 1.39</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body style="padding-top: 2%; padding-left: 20%; padding-right: 20%; padding-bottom: 5%; min-width: 450px;">
+    <p style=""><b>Summarized Problem:</b> A mass m is constrained to move along the x axis, subject to a force \(F(v) = -F_o e^{v/V}\) where \(F_o\) and \(V\) are constants.
+            <b>(a)</b> Find \(v(t)\) if the initial velocity is \(v_o > 0\) at time \(=0\). <b>(b)</b> At what time does it come instantaneously to rest? 
+            <b>(c)</b> Find \(x(t)\) then determine how far the mass travels before coming instantaneously to rest. 
+    </p>
+
+    <br>
+
+    <p><b>Solution:</b> If \(F(v)\) is the force, then \(F(v)/m\) is the acceleration. Therefore, 
+
+        \[\frac{F(v)}{m} = \frac{dv}{dt}\]
+        \[\frac{mdv}{F(v)} = dt\]
+        \[t = m\int_{v_o}^{v} \frac{dv'}{F(v')}   =   -\frac{m}{F_o} \int_{v_o}^{v} \frac{dv'}{e^{v/V}}   =   \frac{mV}{F_o} e^{-v/V} - \frac{mV}{F_o} e^{-v_o/V}\] 
+        \[\implies \frac{mV}{F_o} e^{-v/V} = t + \frac{F_o}{mV} e^{-v_o / V}\]
+        \[e^{-v/V} = \frac{F_o t}{mV} + e^{-v_o / V}\]
+        \[-\frac{v}{V} = \ln(\frac{F_o t}{mV} + e^{-v_o / V})\]
+        \[v = -V \ln(\frac{F_o t}{mV} + e^{-v_o / V})\]
+
+        The next part of the question (b) is basically asking us to find the time when the mass's velocity is zero. Since \(\ln(1) = 0\), we really just need to find t such that
+        \(\frac{F_o t}{mV} + e^{-v_o / V} = 1 \). 
+
+        Doing so, we find that the time when the velocity is zero is 
+
+        \[t = \frac{mV}{F_o} (1-e^{-v_o / V}).\]
+
+        For (c), we basically need to find the definite integral \(v(t)\) from 0 to \(t\) to find the distance the mass has travelled at any given \(t\),
+         then plug in the value for time that we got above. Here I did integration by parts, although it would have probably been easier to use substitution first. 
+
+        \[x = \int_{0}^{t} vdt = -V \int_{0}^{t} \ln(\frac{F_o t}{mV} + e^{-v_o / V}) dt \]
+        \[x = \left. -V \left[ t \ln(\frac{F_o t}{mV} + e^{-v_o / V}) -  \int \frac{\frac{F_o t}{mV}}{\frac{F_o t}{mV} + e^{-v_o / V}} dt \right] \right|_0^t \]
+        \[x = \left. -V \left[ t \ln(\frac{F_o t}{mV} + e^{-v_o / V}) -  \int \frac{(\frac{F_o t}{mV} + e^{-v_o / V}) - e^{-v_o / V}}{\frac{F_o t}{mV} + e^{-v_o / V}} dt \right] \right|_0^t\]
+        \[x = \left. -V \left[ t \ln(\frac{F_o t}{mV} + e^{-v_o / V}) -  t + e^{-v_o/V} \int \frac{1}{\frac{F_o t}{mV} + e^{-v_o / V}} dt \right] \right|_0^t\]
+        \[x = \left. -V \left[ t \ln(\frac{F_o t}{mV} + e^{-v_o / V}) -  t + \frac{mV e^{-v_o/V}}{F_o} \ln(\frac{F_o t}{mV} + e^{-v_o / V}) \right] \right|_0^t \]
+
+        Now, carrying out the evaluation from time 0 to the time we got in (b), and we get 
+
+        \[x= \frac{mV^2}{F_o} (1-e^{-v_o/V}) - \frac{mVv_o e^{-v_o/V}}{F_o}\]
+
+        This is the distance the mass travelled before coming to rest. 
+
+
+
+
+
+
+
+    </p>
+
+</body>
+</html>
