@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 2.41</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body style="padding-top: 2%; padding-left: 20%; padding-right: 20%; padding-bottom: 5%; min-width: 450px;">
+    <p><b>Summarized Problem:</b> A baseball is thrown vertically up with speed \(v_o\) and is 
+        subject to a quadratic drag with magnitude \(f(v) = cv^2\). Write down the equation of 
+        motion for the upward journey (measuring y vertically up) and show that it can be 
+        rewritten as \( \dot{v} = —g[1 + (v/v_{\textrm{ter}})^2]\). Show that the baseball's maximum height is
+
+        \[y_{\textrm{max}} = \frac{v^2_{\textrm{ter}}}{2g} \ln \left(\frac{v^2_{\textrm{ter}} + v^2_o}{v^2_{\textrm{ter}}}\right)\]
+
+        <br>
+    </p>
+
+    <p><b>Solution:</b> Writing the equation of motion is pretty straight forward: the two forces acting
+         on the ball are the quadratic drag force and gravity. Therefore, 
+
+         \[F = -f(v) - mg = -cv^2 - mg,\]
+
+         meaning that
+
+         \[\dot{v} = -\frac{cv^2}{m} - g.\]
+
+         We can then factor this equation: 
+
+         \[\dot{v} = -g\left[1+ \frac{cv^2}{mg}\right].\]
+
+         Now, to answer the first part of the question, we need to show that \(\frac{mg}{c} = v^2_{\textrm{ter}}\). If the forces acting 
+         on an object in free fall are 
+
+         \[F = cv^2 - mg,\]
+
+         then the terminal velocity can only be reached when \(cv^2 = mg\), meaning that 
+         
+         \[v^2_{\textrm{ter}} = \frac{mg}{c}.\]
+
+        The next part of the question is asking us to find the maximum height of the ball in terms of its initial velocity using the 
+        handy relation \(\dot{v} = v\frac{dv}{dy}\). Since we already have an equation for \(\dot{v}\), this differential equation is 
+        pretty easy to solve. Once the variables are separated, we must find the definite integral from \(v_o\) to \(v\). The reason we must 
+        find the definite integral instead of the indefinite integral is because this equation is a little weird in the sense that instead of time
+        being the variable, velocity is. Since the velocity is decreasing predictably (it's decreasing quadratically), finding the definite integral essentially gives us a proxy for how much time has passed, and subsequently the distance travelled. <br><br>
+        For example, the only time (along the upward trajectory) at which \(v=v_o\) is \(t=0\), so if we evaluate the definite integral from \(v_o\) to \(v_o\), we'll obviously find that the baseball
+        hasn't travelled any distance at all. Also, keep in mind that this equation only describes the upward trajectory of the ball. 
+
+        \[\dot{v} = v\frac{dv}{dy}\]
+        \[-g\left[1+ \frac{v^2}{v^2_{\textrm{ter}}}\right] = v\frac{dv}{dy}\]
+        \[\frac{-g\left[1+ \frac{v^2}{v^2_{\textrm{ter}}}\right]}{vdv} = \frac{1}{dy}\]
+        \[\frac{vdv}{-g\left[1+ \frac{v^2}{v^2_{\textrm{ter}}}\right]} = dy\]
+        \[y = -\frac{1}{g} \int_{v_o}^{v} \frac{v}{\frac{v^2}{v^2_{\textrm{ter}}} + 1}dv\]
+
+        Let \(u = \frac{v^2}{v^2_{\textrm{ter}}} + 1\) and \(du = \frac{2}{v^2_{\textrm{ter}}}vdv\)
+
+        \[y = -\frac{v^2_{\textrm{ter}}}{2g} \int_{v_o}^{v} \frac{1}{u}du\]
+        \[y = \left. -\frac{v^2_{\textrm{ter}}}{2g} \ln u \right|_{v_o}^{v}\]
+        \[y = \left. -\frac{v^2_{\textrm{ter}}}{2g} \ln \left(\frac{v^2}{v^2_{\textrm{ter}}} + 1\right) \right|_{v_o}^{v}\]
+        \[y = -\frac{v^2_{\textrm{ter}}}{2g} \ln \left(\frac{v^2}{v^2_{\textrm{ter}}} + 1\right) + \frac{v^2_{\textrm{ter}}}{2g} \ln \left(\frac{v_o^2}{v^2_{\textrm{ter}}} + 1\right)\]
+
+        Since we're looking for \(y_\textrm{max}\), we're looking for the height when the velocity is 0, meaning that the ball is at the peak 
+        of its trajectory and about to head back towards the ground. Thus, we can evaluate the above equation at \(v=0\) to find  \(y_\textrm{max}\).
+
+        \[y_{\textrm{max}} = -\frac{v^2_{\textrm{ter}}}{2g} \ln \left(\frac{0^2}{v^2_{\textrm{ter}}} + 1\right) + \frac{v^2_{\textrm{ter}}}{2g} \ln \left(\frac{v_o^2}{v^2_{\textrm{ter}}} + 1\right)\]
+        \[y_{\textrm{max}} = \frac{v^2_{\textrm{ter}}}{2g} \ln \left(\frac{v_o^2}{v^2_{\textrm{ter}}} + 1\right)\]
+        \[y_{\textrm{max}} = \frac{v^2_{\textrm{ter}}}{2g} \ln \left(\frac{v_o^2 + v^2_{\textrm{ter}}}{v^2_{\textrm{ter}}}\right)\]
+
+        And thus, we have shown that the peak of the trajectory that the question posed is correct. 
+
+
+
+
+    </p>
+
+
+</body>
+</html>
