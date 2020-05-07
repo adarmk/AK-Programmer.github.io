@@ -35,17 +35,21 @@
         \[t = \frac{mV}{F_o} (1-e^{-v_o / V}).\]
 
         For (c), we basically need to find the definite integral of \(v(t)\) from 0 to \(t\) to find the distance the mass has travelled at any given \(t\),
-         then plug in the value for time that we got above. Here I did integration by parts, although it would have probably been easier to use substitution first. 
+         then plug in the value for time that we got above. 
 
         \[x = \int_{0}^{t} vdt = -V \int_{0}^{t} \ln(\frac{F_o t}{mV} + e^{-v_o / V}) dt \]
-        \[x = \left. -V \left[ t \ln(\frac{F_o t}{mV} + e^{-v_o / V}) -  \int \frac{\frac{F_o t}{mV}}{\frac{F_o t}{mV} + e^{-v_o / V}} dt \right] \right|_0^t \]
-        \[x = \left. -V \left[ t \ln(\frac{F_o t}{mV} + e^{-v_o / V}) -  \int \frac{(\frac{F_o t}{mV} + e^{-v_o / V}) - e^{-v_o / V}}{\frac{F_o t}{mV} + e^{-v_o / V}} dt \right] \right|_0^t\]
-        \[x = \left. -V \left[ t \ln(\frac{F_o t}{mV} + e^{-v_o / V}) -  t + e^{-v_o/V} \int \frac{1}{\frac{F_o t}{mV} + e^{-v_o / V}} dt \right] \right|_0^t\]
-        \[x = \left. -V \left[ t \ln(\frac{F_o t}{mV} + e^{-v_o / V}) -  t + \frac{mV e^{-v_o/V}}{F_o} \ln(\frac{F_o t}{mV} + e^{-v_o / V}) \right] \right|_0^t \]
+        Let \(u = \displaystyle \frac{F_o t}{mV} + e^{-v_o / V}\) and \(du = \displaystyle \frac{F_o}{mV}dt\). 
+
+        \[x = - \frac{mV^2}{F_o} \int_0^t \ln (u) du\]
+        \[x = \left. - \frac{mV^2}{F_o} (u \ln (u) - u ) \right|_0^t\]
+        \[x = \left. - \frac{mV^2}{F_o} \left[(\frac{F_o t}{mV} + e^{-v_o / V}) \ln (\frac{F_o t}{mV} + e^{-v_o / V}) - \frac{F_o t}{mV} - e^{-v_o / V} \right] \right|_0^t\]
+        \[x = \left. - \frac{mV^2}{F_o} \left[(\frac{F_o t}{mV} + e^{-v_o / V}) \ln (\frac{F_o t}{mV} + e^{-v_o / V}) - \frac{F_o t}{mV} - e^{-v_o / V} \right] \right|_0^t\]
+        \[x = \left. - \frac{mV^2}{F_o} \left(\frac{F_o t}{mV} + e^{-v_o / V}\right) \left[\ln (\frac{F_o t}{mV} + e^{-v_o / V}) - 1 \right] \right|_0^t\]
 
         Now, carry out the evaluation from time 0 to the time we got in (b), and we get 
 
         \[x= \frac{mV^2}{F_o} (1-e^{-v_o/V}) - \frac{mVv_o e^{-v_o/V}}{F_o}\]
+        
 
         This is the distance the mass would travel before coming to rest. 
     </p>
