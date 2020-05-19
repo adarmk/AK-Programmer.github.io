@@ -124,16 +124,51 @@
         the ratio of area of parallelogram these two new vectors form to the area of the paralleogram the vectors 
         in \(xy\) space form, which tells us exactly how much it's scaled. <br><br>
 
-        Multiplying this by \(dxdy\) in the integrand gives us the 'correctly sized' areas which we integrate. 
+        Multiplying this by \(dxdy\) in the integrand gives us the 'correctly sized' areas which we integrate. And so, 
+        the 'scaled' integral actually looks like this, 
+
+        \[\iint_D 3x\sin(6x+7y) - y \sin(6x+7y) dxdy = \iint_{D^*} u \sin v \left|\frac{\partial (u, v)}{\partial (x, y)}\right| dudv\]
+        \[= \iint_{D^*} u \sin v \left| \begin{matrix} 
+        \frac{\partial u}{\partial x} & \frac{\partial u}{\partial y} \\ 
+        \frac{\partial v}{\partial x} & \frac{\partial v}{\partial y}
+        \end{matrix} \right| dudv\]
+
+        \[= \iint_{D^*} u \sin v \left| \begin{matrix} 
+        3 & -1 \\ 6 & 7 \end{matrix} \right| dudv\]
+        \[= 27 \iint_{D^*} u \sin v dudv\]
 
     </p>
 
+    <h3>Applications</h3>
 
     
+    <p>
+        The most common application of the change of variables method is most likely converting between different coordinate
+        systems. If we want to evaluate the integral 
+    
+        \[\iint_D f(x, y)dxdy\]
+
+        in polar coordinates, first we define the transformation, 
+        \[x=r\cos\theta, \ \ \ \ y= r\sin\theta\]
+
+        then we set up and evaluate the Jacobian
+        \[\left| \frac{\partial (x, y)}{\partial (r, \theta)}\right| = 
+        \left| \begin{matrix}
+        \cos\theta & -sin\theta \\ 
+        \sin\theta & r\cos\theta
+        
+        
+        \end{matrix} \right| = rcos^2\theta + rsin^2\theta = r\]
+
+        And finally, we can complete the change of variables: 
+        \[\iint_D f(x, y)dxdy = \iint_{D^*} f(r\cos\theta, r\sin\theta) \left| \frac{\partial (x, y)}{\partial (r, \theta)}\right|  dr d\theta = 
+        \iint_{D^*} f(r\cos\theta, r\sin\theta) r dr d\theta\]
+
+        And that's how you can use the Jacobian and the change of variables method to greatly simplify solving all sorts of integrals.
+        I hope you found this helpful!
 
 
-
-
-
+        
+    </p>
 </body>
 </html>
