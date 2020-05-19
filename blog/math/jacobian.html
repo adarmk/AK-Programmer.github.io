@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacobian Matrices</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../blog.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+</head>
+<body>
+    <div style="padding-bottom: 40px;">
+        <h1 style="font-size: 40px; margin-bottom: 0;">Change of Variables and The Jacobian</h1>
+        <p style="color: #858585">May 18, 2020</p>
+    </div>
+    <p>
+    In single-variable calculus, we can integrate functions of the form 
+
+    \[g'(x)f(g(x))\]
+
+    by 'rephrasing' the entire integral as an integral of \(g(x)\) instead of an integral of \(x\). This is known as substitution. For example, consider the following integral: 
+
+    \[\int x e^{x^2} dx\]
+
+    Integrating this function as it currently is is painfully annoying, and so Leibniz, one of the fathers of calculus, came up with a way to simplify this integral. The first step
+    in doing so is to notice that 
+
+    \(x\) can be represented as a derivative of \(x^2\). More precisely, if we let \(u=x^2\), then 
+
+    \[\frac{du}{dx} = 2 x\]
+    \[du = 2 xdx\]
+
+    Notice how this is very similar to the \(xdx\) we had in our original integrand, except it has a coefficient of \(2\). It follows, then, 
+    that in order for \(du\) to equal \(xdx\), we must divide it by two, 
+
+    \[xdx = \frac{1}{2} du\] 
+    
+    We can now substitute the variables in our original integral with the new ones, 
+
+    \[\int x e^{x^2} dx = \frac{1}{2} \int e^u du\]
+
+    making the integral trivially easy to solve: 
+
+    \[ \frac{1}{2} \int e^u du = \frac{e^u}{2} + C = \frac{e^{x^2}}{2} + C\]
+
+    Now, if we want to use an analogous process for functions of several variables, how would we do that? <br><br>
+    </p>
+
+    <h3>Change of Variables</h3>
+    <p>
+    Consider the double integral
+    \[\iint_D 3x\sin(6x+7y) - y \sin(6x+7y) dxdy\]
+
+    While this integral isn't impossible to solve, we can greatly simplify the process by employing a change of variables. First, we define the transformation
+
+    \[T: D \rightarrow D^*\]
+
+    such that 
+
+    \[T(x, y) = (u, v)\]
+
+    where \(u=3x-y\) and \(v=6x+7y\). This transformation transforms the domain \(D\) in \(xy\) space to a domain \(D^*\) in \(uv\) space. 
+    If \(D\) was the unit square \([0, 1]\times[0, 1]\), for example, the transformation \(T\) would "stretch" or "squeeze" the unit square into a parallelogram with a different area. 
+    Keep this notion in mind, as it will be important in the next step (later in the post I give examples of other transformations). <br><br>
+
+    Now that we have our substitutions for \(x\) and \(y\), we can just replace them with our new variables and integrate over the new domain \(D^*\)... 
+
+    \[\iint_D 3x\sin(6x+7y) - y \sin(6x+7y) dxdy \stackrel{?}{=} \iint_{D^*} u \sin v dudv\]
+
+    ... right? 
+
+    Well, not exactly. The problem is that the infinitesimal area \(dudv\) is different than the infinitesimal area \(dxdy\) precisely because the area of the domain as a whole changes 
+    after being transformed. In order to fix this, wouldn't it really cool if we had a tool for determining by how much the infinitesimal area \(dxdy\) is scaled when transformed? 
+    That's where the Jacobian comes in. <br><br>
+    </p>
+
+
+    <h3>Jacobian Matrices</h3>
+
+    <p>
+    The Jacobian matrix of a transformation, or, more precisely, its determinant, tells us exactly by how much the infinitesimal area is scaled. The Jacobian matrix of the transformation \(T\)
+    (as defined above) looks like this: 
+
+    \[\left| \frac{\partial (u, v)}{\partial (x, y)}\right| = 
+    
+    \left| \begin{matrix} 
+    \frac{\partial u}{\partial x} & \frac{\partial u}{\partial y} \\ 
+    \frac{\partial v}{\partial x} & \frac{\partial v}{\partial y}
+    \end{matrix} \right|\]
+
+    Let's think about why the determinant of such a matrix might give us the factor by which the area is scaled. 
+
+    
+    </p>
+    
+
+
+
+
+
+</body>
+</html>
