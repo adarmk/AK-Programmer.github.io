@@ -13,7 +13,7 @@
 
 </head>
 <body>
-    <div style="padding-bottom: 40px;">
+    <div style="padding-bottom: 30px;">
         <h1 style="font-size: 40px; margin-bottom: 0;">Change of Variables and The Jacobian</h1>
         <p style="color: #858585">May 18, 2020</p>
     </div>
@@ -82,7 +82,7 @@
     <h3>Jacobian Matrices</h3>
 
     <p>
-    The Jacobian matrix of a transformation, or, more precisely, its determinant, tells us exactly by how much the infinitesimal area is scaled. The Jacobian matrix of the transformation \(T\)
+    The Jacobian matrix of a transformation, or, more precisely, its determinant, tells us exactly by how much the transformation scales the infinitesimal area. The Jacobian matrix of the transformation \(T\)
     (as defined above) looks like this: 
 
     \[\left| \frac{\partial (u, v)}{\partial (x, y)}\right| = 
@@ -92,10 +92,43 @@
     \frac{\partial v}{\partial x} & \frac{\partial v}{\partial y}
     \end{matrix} \right|\]
 
-    Let's think about why the determinant of such a matrix might give us the factor by which the area is scaled. 
+    Let's think about why the determinant of such a matrix might give us the factor by which the area is scaled. <br><br>
 
-    
+    In the same way that a smooth, continuous function looks more and more like a straight line the more you 'zoom in' on a point, 
+    a smooth, continuous transformation, looks more and more like a linear transformation the more you zoom in. Below is a perfect example: 
+    a non-linear transformation that warps space, but it's not difficult to imagine that as you 'zoom in', which really just means
+    paying attention only to points around some given point, one could <i>locally</i> approximate this transformation with a linear 
+    one.   
     </p>
+
+    <img src="../assets/nonlinear transformation.jpg" alt="">
+
+    Now, we can take advantage of this fact by considering the infinitesimal area dxdy at some point \((x_0, y_0)\): 
+    <img src="../assets/dxdy.png" alt="">
+    <p>
+        If we think of the two columns in the Jacobian matrix as transformations of the basis vectors, 
+    
+        \[T_x = \left[ \begin{matrix} \frac{\partial u}{\partial x} \\ \frac{\partial v}{\partial x}\end{matrix}\right], \ \ \ \ T_y = \left[ \begin{matrix} \frac{\partial u}{\partial y} \\ \frac{\partial v}{\partial y}\end{matrix}\right]\]
+    
+        then \(T_x\) tells us how much the basis vector \(\hat{\mathbf{i}}\) is scaled and \(T_y\) tells us how much \(\hat{\textbf{j}}\) is scaled. 
+    </p>
+
+    <img src="../assets/local transformation.png" alt="">
+
+    <p>
+        As the diagram shows, \(\partial u/\partial x\) tells us how much an infinitesimal step in the \(x\) direction
+        is scaled in the \(u\) direction, \(\partial v / \partial x\) tells us how much a step in the \(x\) direction
+        is scaled in the \(v\) direction, and so on. <br><br>
+
+        Taking the determinant of these two vectors (which together form the Jacobian matrix) essentially gives us 
+        the ratio of area of parallelogram these two new vectors form to the area of the paralleogram the vectors 
+        in \(xy\) space form, which tells us exactly how much it's scaled. <br><br>
+
+        Multiplying this by \(dxdy\) in the integrand gives us the 'correctly sized' areas which we integrate. 
+
+    </p>
+
+
     
 
 
