@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 2.6</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body style="padding-top: 2%; padding-left: 20%; padding-right: 20%; padding-bottom: 5%; min-width: 450px;">
+    <p><b>Problem:</b> Consider the wave function 
+    \[\Psi (x,t)=Ae^{-\lambda |x|}e^{-i\omega t},\]
+
+    where \(A\), \(\lambda\), and \(\omega\) are positive real constants. Normalize \(\Psi\), determine the expectation values of \(x\) and \(x^2\), and find the 
+    standard deviation of \(x\). 
+    </p>
+
+    <p><b>Solution: </b> First, to normalize \(\Psi\) means to find \(A\) such that 
+        \[\int_{-\infty}^{\infty} |\Psi (x, t)|^2 dx = 1,\]
+
+        so let's do that. 
+        \[\int_{-\infty}^{\infty} |\Psi (x, t)|^2 dx = 1,\]
+        \[\int_{-\infty}^{\infty} \Psi^* \Psi dx = 1,\]
+
+        remembering that \(\Psi^*\) is the complex conjugate of the wave function, 
+        \[\int_{-\infty}^{\infty} Ae^{-\lambda |x|}e^{-i\omega t} Ae^{-\lambda |x|}e^{i\omega t} dx = 1\]
+        \[A^2 \int_{-\infty}^{\infty} e^{-2 \lambda |x|} dx = 1\]
+        \[A^2 \int_{-\infty}^0 e^{2 \lambda x}dx + A^2 \int_0^{\infty} e^{-2 \lambda x}dx = 1\]
+        \[\left. \frac{A^2}{2\lambda} e^{2 \lambda x}\right|_{-\infty}^{0} - \left. \frac{A^2}{2\lambda} e^{-2 \lambda x} \right|_0^{\infty} = 1\]
+        \[\frac{A^2}{2\lambda} - \lim\limits_{x\rightarrow -\infty} \frac{A^2}{2\lambda} e^{2 \lambda x} - \lim\limits_{x\rightarrow \infty} \frac{A^2}{2\lambda} e^{-2 \lambda x} + \frac{A^2}{2\lambda} = 1\]
+
+        Evaluating this at the limits, its clear that \(e^{-\infty}\) approaches zero, and so we're left with: 
+        \[\frac{A^2}{2\lambda} + \frac{A^2}{2\lambda} = 1\]
+        \[\frac{A^2}{\lambda} = 1\]
+        \[A = \sqrt{\lambda}\]
+
+        Now, we must find the expecation value of \(x\). If \(|\Psi (x, t)|^2\) gives us the probability of finding a particle at a point \(x\) at time \(t\), then the expectation
+        value of \(x\) is defined as the average point \(x\) you'd find that particle at given the probability distribution (that's perhaps not the best way to think about it, 
+        but explaining the significance of the expectation value is outside the scope of this solution). And so, the expectation value is defined as 
+        \[\langle x \rangle = \int_{-\infty}^{\infty} x |\Psi (x, t)|^2 dx\]
+        Now, solving for it, 
+        \[\langle x \rangle = A^2 \int_{-\infty}^{\infty} x e^{-2 \lambda |x|} dx\]
+        \[\langle x \rangle = \lambda \int_{-\infty}^0 x e^{2 \lambda x} dx + \lambda \int_0^{\infty} x e^{-2 \lambda x} dx\]
+        
+
+    </p>
+    
+
+</body>
+</html>
