@@ -33,10 +33,10 @@
         \[\rho g dl \sin\theta = \rho g dl \frac{df/dx}{\sqrt{1+(df/dx)^2}}\]
 
         Our goal now is to prove that the sum of tangential components of gravity at every point add up to zero. Now, notice that the infinitesimal length \(dl\) is actually equal to the 
-        hypotenuse of the triangle above. After all, \(dl\) is the resultant displacement when one takes a step \(dx\) in the horizontal direction and a 
-        step \(\frac{df}{dx}dx\) in the vertical direction, and cancelling the \(dx\)'s leaves us with the triangle we had before. Thus, 
+        hypotenuse of the triangle above multiplied by \(dx\). After all, \(dl\) is the resultant displacement when one takes a step \(dx\) in the horizontal direction and a 
+        step \(\frac{df}{dx}dx\) in the vertical direction, and factoring out \(dx\) leaves us with the triangle we had before. Thus, we have 
         
-        \[\rho g dl \frac{df/dx}{\sqrt{1+(df/dx)^2}} = \rho g \sqrt{1+(df/dx)^2} \frac{df/dx}{\sqrt{1+(df/dx)^2}} = \rho g \frac{df}{dx}\]
+        \[\rho g dl \frac{df/dx}{\sqrt{1+(df/dx)^2}} = \rho g \sqrt{1+(df/dx)^2} dx \frac{df/dx}{\sqrt{1+(df/dx)^2}} = \rho g \frac{df}{dx} dx\]
         
         Remember that this gives us the tangential force of gravity at any point along the chain, meaning that integrating this function along the entire chain must give us the net 
         tangential force of gravity: 
