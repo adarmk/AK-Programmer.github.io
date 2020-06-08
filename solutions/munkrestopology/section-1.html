@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 1</title>
+    <link rel="stylesheet" href="https://latex.now.sh/style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <div class="author">
+        <h2>Munkres - Section 1</h2>
+        <p class="author"><a href="../../index.html">Adar Kahiri</a> <br> June 2020</p>
+    </div>
+
+    <p> <b>Problem 1: Check the distributive laws for \(\cup\) and \(\cap\), and DeMorgan's laws.</b> <br>
+
+        Starting with the first distributive law, 
+
+        \[A \cap (B \cup C) = (A \cap B) \cup (A\cap C)\]
+       \[x \in A \cap (B \cup C) \iff x \in A \ \textrm{and} \ (x \in B \ \textrm{or} \ x \in C)\]
+       \[\iff (x \in A \ \textrm{and} \ x \in B) \ \textrm{or} \ (x \in A \ \textrm{and} \ x \in C) \iff (A \cap B) \cup (A\cap C) \ \ \ QED\]
+
+        Very similar logic applies to the second distributive law, 
+        \[A \cup (B \cap C) = (A \cup B) \cap (A\cup C)\]
+
+        Next, we have DeMorgan's first law (to be honest, I'm not sure what the order is), 
+        \[A - (B \cup C) = (A - B)\cup (A-C)\]
+        \[x \in A - (B \cup C) \iff x \in A \ \textrm{and} \ x \not\in B \ \textrm{and} \ x \not\in C\]
+        \[\iff x \in A - B \ \textrm{and} \ x \in A - C \iff (A-B) \cup (A-C) \ \ \ QED\]
+
+        Once again, similar logic applies to DeMorgan's other law, 
+        \[A - (B \cap C) = (A-B) \cup (A - C)\]
+
+
+        
+    </p>
+    
+
+</body>
+</html>
