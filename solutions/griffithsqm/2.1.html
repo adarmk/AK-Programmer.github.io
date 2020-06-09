@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 2.1</title>
+    <link rel="stylesheet" href="https://latex.now.sh/style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <div class="author">
+        <h2>Griffiths - Problem 2.1</h2>
+        <p class="author"><a href="../../index.html">Adar Kahiri</a> <br> June 2020</p>
+    </div>
+
+    <p><b>Problem:</b> Prove the following three theorems </p>
+    <ul>
+        <li><b>(a)</b> For normalizable solutions, the separation constant \(E\) must be real.</li>
+        <li><b>(b)</b> The time-independent wave-function \(\psi(x)\) can always be taken to be real (unlike \(\Psi (x, t)\))</li>
+        <li><b>(c)</b> If \(V(x)\) is an even function (that is, \(V(x)=V(-x)\)), then \(\psi(x)\) can always be taken to be either even or odd.</li>
+    </ul>
+
+    <p><b>Solution: </b>
+    
+        <div class="proof">
+            <b>(a)</b> We have the wave-function 
+
+        \[\Psi(x, t) = \psi(x)e^{-iEt/\hbar}\]
+
+        Now, if we assume that \(E\) is a complex number that takes on the form \(E_0 + \Gamma i\), we have 
+
+        \[\Psi(x, t) = \psi(x)e^{-i(E_0 + \Gamma i)t/\hbar} = \psi(x)e^{(-iE_0t + \Gamma t)/\hbar}\]
+
+        If \(\Psi\) is normalizable, then
+        \[ A \int_{-\infty}^{\infty} \Psi^* \Psi dx = 1\]
+
+        for some complex number \(A\). Substituting in the wave-function, we have  
+
+        \[ A \int_{-\infty}^{\infty} \Psi^* \Psi dx = A \int_{-\infty}^{\infty} \psi(x)e^{(iE_0t + \Gamma t)/\hbar} \psi(x)e^{(-iE_0t + \Gamma t)/\hbar} dx = 
+        A \int_{-\infty}^{\infty} \psi^2 (x) e^{2\Gamma t / \hbar}dx \ \ \ \ \ \ (1)\]
+            The problem here is that if we were to integrate this, the normalization constant \(A\) would become a function of \(t\), meaning it wouldn't be constant, meaning the function
+        doesn't remain normalized over time. The only way that \(A\) could remain constant is if \(\Gamma = 0\), implying that \(E\) must be, practically speaking, a real number. <br><br>
+        
+        More generally, the same can easily be shown for non-separable wave-functions (which are simply linear combinations of separable ones). We have 
+        
+        \[\Psi(x, t) = \sum\limits_{n=1}^{\infty} c_n \psi_n (x) e^{-i E_n t / \hbar} = \sum\limits_{n=1}^{\infty} c_n \psi_n (x) e^{(-iE_nt + \Gamma_n t)/\hbar}\]
+
+        Thus, if \(\Psi\) is normalizable,  
+
+        \[1 = A \int_{-\infty}^{\infty} \Psi^* \Psi dx = A \int_{-\infty}^{\infty} \Psi^* \Psi dx = A \int_{-\infty}^{\infty} 
+        \left(\sum\limits_{n=1}^{\infty} c_n \psi_n (x) e^{(iE_0t + \Gamma t)/\hbar}\right) \left( \sum\limits_{n=1}^{\infty} c_n \psi_n (x) e^{(-iE_0t + \Gamma t)/\hbar} \right) dx\]
+
+        \[= A \int_{-\infty}^{\infty} \left(c_1 \psi_1 (x)e^{(iE_1 t + \Gamma_1 t)/\hbar} + \cdots +  c_{\infty} \psi_{\infty} (x)e^{(iE_{\infty} t + \Gamma_{\infty} t)/\hbar}\right) 
+        \left(c_1 \psi_1 (x)e^{(-iE_1 t + \Gamma_1 t)/\hbar} + \cdots +  c_{\infty} \psi_{\infty} (x)e^{(-iE_{\infty} t + \Gamma_{\infty} t)/\hbar}\right)dx\]
+
+        The product of these two sums will produce two kinds of terms. One will take on the form of the final expression in \((1)\), meaning \(E\) must be real by the 
+        same logic used before. The second kind of term will contain the product of two or more time-independent wave-functions. I didn't know this as it wasn't yet explained in the textbook, 
+        but when consulting a friend I found out that the product of two time-independent wave-functions (also known as stationary states or energy eigenstates) 
+        must be zero because they are orthogonal.<br><br>
+        
+        Thus, the same condition (\(\Gamma = 0\)), must be true for any wave-function. 
+
+        </div> 
+        <br>
+        <div class="proof">
+        <b>(b)</b> Here, Griffiths specifies that while a time-independent solution can be complex, it can always be represented as a linear combination of 
+            solutions with the same energy that are real. So what he is actually asking us to prove is that the time-independent wave-function can always be represented
+            as a linear combination of real time-independent wave-functions. <br><br>
+
+            He points out that if \(\psi(x)\) satisfies the time-independent Schrödinger equation, 
+
+            \[-\frac{h^2}{2m}\frac{d^2 \psi}{dx^2}+V\psi = E\psi\]
+
+            for some given \(E\), so must its complex conjugate, and subsequently so must the real linear combinations
+
+            \[(\psi + \psi^*) \ \ \ \ \textrm{and} \ \ \ \ i(\psi - \psi^*)\]
+
+            With this information in mind, we can construct a proof relatively easily. We can define \(\psi\) as follows: 
+
+            \[\psi(x) = a(x) + ib(x)\]
+
+            Thus, 
+
+            \[(\psi + \psi^*) = 2a(x) \ \ \ \ \ i(\psi - \psi^*) = -2b(x)\]
+
+            Here, we have two real wave functions. Expressing \(\psi\) as a linear combination of \(2a\) and \(-2b\), we have 
+
+            \[\psi(x) = \frac{1}{2} (2a + i 2b) = \frac{1}{2} ((\psi + \psi^*) - i^2(\psi - \psi^*))\]
+
+            And so we've expresssed \(\psi\) as a linear combination of two real wave-functions.
+        </div>
+
+        <div class="proof"> <b>(c)</b> Once again, it's important to note that what Griffiths means here by "taken to be..." is that 
+            \(\psi(x)\) can be represented as a <i>linear combination</i> of even and odd solutions. <br><br>
+            If \(\psi (x)\) satisfies
+
+            \[-\frac{h^2}{2m}\frac{d^2 \psi(x)}{dx^2}+V(x)\psi(x) = E\psi(x),\]
+
+            then, the same must be true for \(-x\), and so (assuming \(V(x)=V(-x)\)) we have,  
+
+            \[-\frac{h^2}{2m}\frac{d^2 \psi(-x)}{dx^2}+V(-x)\psi(-x) = -\frac{h^2}{2m}\frac{d^2 \psi(-x)}{dx^2}+V(x)\psi(-x) = E\psi(-x)\]
+
+            This is important because if \(V(-x) \neq V(x)\), then \(\psi(-x)\) wouldn't satisfy the equation for the same \(E\) as 
+            \(\psi(x)\). <br><br>
+            If both \(\psi(x)\) and \(\psi(-x)\) satisfy the time-independent Schrödinger equation, then so must \(\psi(x) \pm \psi(-x)\). This gives us
+            a valid, even solution to the time-independent Schrödinger equation, 
+
+            \[\psi(x)' = \psi(x) + \psi(-x)\]
+
+            and a valid, odd solution
+
+            \[\psi(x)'' = \psi(x) - \psi(-x)\]
+
+            where the apostrophies have nothing to do with derivatives and are simply used to differentiate (pun unintended) between the different functions. Since
+            
+            \[\psi(x) = \frac{1}{2}(\psi(x)' + \psi(x)''),\]
+
+            \(\psi\) is a linear combination of even and odd solutions, and thus \(\psi\) may as well be taken to be either even or odd. <br><br>
+        </div>
+    </p>
+
+</body>
+</html>
