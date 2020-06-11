@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 1.17</title>
+    <link rel="stylesheet" href="https://latex.now.sh/style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <div class="author">
+        <h2>Griffiths - Problem 1.17</h2>
+        <p class="author"><a href="../../index.html">Adar Kahiri</a> <br> June 2020</p>
+    </div>
+
+    <p><b>Problem:</b> Suppose you wanted to describe an <b>unstable particle,</b> that spontaneously disintegrates with a 'lifetime' \(\tau\). In that case the total probability 
+    of finding the particle somewhere should <i>not</i> be constant, but should decrease at an exponential rate: 
+    
+    \[P(t) = \int_{-\infty}^{\infty} |\Psi(x, t)|^2 dx = e^{-t/\tau}.\]
+
+    If
+
+    \[V = V_0 - i\Gamma,\]
+
+    where \(V_0\) is the true potential energy and \(\Gamma\) is a positive real constant. 
+    </p>
+
+    <ul>
+        <li><b>(a)</b> Show that, in place of \(dP/dt = 0\), as with a "stable particle", we now get \[\frac{dP}{dt} = - \frac{2\Gamma}{\hbar}P\]</li>
+        <li><b>(b)</b> Solve for \(P(t)\), and find the lifetime of the particle in terms of \(\Gamma\)</li>
+    </ul>
+    <br><br>
+    <p><b>Solution: </b> Starting with <b>(a)</b>, we must evaluate the derivative of the probability function. 
+
+        \[\frac{dP}{dt} = \frac{d}{dt} \int_{-\infty}^{\infty} |\Psi(x, t)|^2 dx = \int_{-\infty}^{\infty} \frac{\partial}{\partial t} (\Psi^* \Psi) dx\]
+
+        By the product rule, 
+
+        \[= \int_{-\infty}^{\infty} \frac{\partial \Psi^*}{\partial t}\Psi + \frac{\partial \Psi}{\partial t}\Psi^* dx\]
+
+        Substituting in the Schrödinger equation for the derivatives with respect to time, 
+
+        \[= \int_{-\infty}^{\infty} - \frac{i\hbar}{2m}\frac{\partial^2 \Psi^*}{\partial x^2}\Psi + \frac{i}{\hbar}V\Psi^*\Psi + \frac{i\hbar}{2m}\frac{\partial ^2 \Psi}{\partial x^2}\Psi^* - \frac{i}{\hbar} V\Psi^* \Psi dx\]
+
+        Remembering that \(V = V_0 - i\Gamma\) (and that \(V = V_0 + i\Gamma\) for the complex conjugate),
+
+        \[= \int_{-\infty}^{\infty} - \frac{i\hbar}{2m}\frac{\partial^2 \Psi^*}{\partial x^2}\Psi + \left(\frac{i}{\hbar}V_0 - \frac{\Gamma}{\hbar}\right)\Psi^*\Psi + \frac{i\hbar}{2m}\frac{\partial ^2 \Psi}{\partial x^2}\Psi^* - \left(\frac{i}{\hbar}V_0 + \frac{\Gamma}{\hbar}\right)\Psi^* \Psi dx\]
+        
+        \[= \int_{-\infty}^{\infty} - \frac{i\hbar}{2m}\frac{\partial^2 \Psi^*}{\partial x^2}\Psi + \frac{i\hbar}{2m}\frac{\partial ^2 \Psi}{\partial x^2}\Psi^* - \frac{2\Gamma}{\hbar} \Psi^* \Psi dx\]
+        \[= - \int_{-\infty}^{\infty} \frac{\partial}{\partial x} \left(\frac{i\hbar}{2m}\frac{\partial \Psi^*}{\partial x}\Psi - \frac{i\hbar}{2m}\frac{\partial \Psi}{\partial x}\Psi^*\right)dx - \frac{2\Gamma}{\hbar} \int_{-\infty}^{\infty} \Psi^* \Psi dx\]
+        \[= -\left[\frac{i\hbar}{2m}\frac{\partial \Psi^*}{\partial x}\Psi - \frac{i\hbar}{2m}\frac{\partial \Psi}{\partial x}\Psi^*\right]_{-\infty}^{\infty} - \frac{2\Gamma}{\hbar} P\]
+
+        If \(\Psi\) is to be normalizable, it must go to zero as \(x\) goes to \(\pm \infty\), and so we are left with the ordinary differential equation, 
+
+        \[\frac{dP}{dt} = -\frac{2\Gamma}{\hbar}P.\]
+
+        Part <b>(b)</b> asks us asks us to solve this equation which we can easily do via separation of variables.
+
+        \[\frac{dP}{dt} = -\frac{2\Gamma}{\hbar}P\]
+        \[\frac{dP}{P} = -\frac{2\Gamma}{\hbar}dt\]
+        \[\int \frac{dP}{P} = -\frac{2\Gamma}{\hbar} \int dt\]
+        \[\ln(P) = -\frac{2\Gamma}{\hbar} t + c\]
+        \[P = e^{-\frac{2\Gamma}{\hbar} t + c} = e^{-\frac{2\Gamma}{\hbar} t}e^c = C e^{-\frac{2\Gamma}{\hbar} t}\]
+
+        where \(C = e^c\). Relating this back to the given exponential function, \(\tau = \hbar/2\Gamma\).
+        
+        
+
+
+    </p>
+
+</body>
+</html>
