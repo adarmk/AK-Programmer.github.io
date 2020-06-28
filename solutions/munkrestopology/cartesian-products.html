@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartesian Products</title>
+    <link rel="stylesheet" href="https://latex.now.sh/style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <div class="author">
+        <h2>Munkres - Cartesian Products</h2>
+        <p class="author"><a href="../../index.html">Adar Kahiri</a> <br> June 2020</p>
+    </div>
+
+    <p> <b>Problem 1: Show there is a bijective correspondence of \(A \times B\) with \(B \times A\)</b> 
+        <br>
+        <div class="proof"> Since \((a, b) \in A \times B \iff (b, a) \in B \times A\), we can map any element
+            \((a, b)\) to the element  \((b, a)\) and vice versa, and so there is clearly a bijective
+            correspondence between the two sets. 
+        </div>
+ 
+        <br><br>
+
+        <b>Problem 3: Let \(A = A_1 \times A_2 \times \cdots\) and \(B = B_1 \times B_2 \times \cdots\)</b>
+        <ul>
+            <li><b>(a) Show that if \(B_i \subset A_i\) for all \(i\), then \(B \subset A\)</b></li>
+            <li><b>(b) Show the converse of (a) holds if \(B\) is nonempty.</b></li>
+            <li><b>(c) Show that if \(A\) is nonempty, each \(A_i\) is nonempty. Does the converse hold?</b></li>
+            <li><b>(d) What is the relation between the set \(A \cup B\) and the cartesian product 
+                \[\prod\limits_{i \in \mathbb{Z}_{+}}
+                A_{i} \cup B_{i}.\]
+
+                What is the relation between the set \(A \cap B\) and the cartesian product
+                \[\prod\limits_{i \in \mathbb{Z}_{+}}
+                A_{i} \cap B_{i}.\]
+            </b></li>
+        </ul>
+        
+        <div class="proof">
+            (a) The first part of this question is asking to show that given \(A =
+            A_1 \times A_2 \times \cdots\) and \(B = B_1 \times B_2 \times \cdots\), if \(B_{i} \subset A_{i}\), then \(B \subset A\). Remembering that 
+
+            \[\prod\limits_{i \in \mathbb{Z}_{+}} S_{i} = S_1 \times S_2 \times \cdots\] 
+
+            is defined as the set of all \(\omega\)-tuples  \((\omega_1, \omega_2,
+            \cdots)\) of elements of \(S_1 \cup S_2 \cup \cdots\) such that \(\omega_1
+            \in S_1, \omega_2 \in S_2, \cdots\), it follows that for any given
+            \(\omega_{i} \in B_{i}\), \(\omega_{i}\) must also be in \(A_{i}\), and so any
+            \((\omega_1, \omega_2, \cdots) \in B\) must also be in \(A\).
+
+        </div>
+
+    </p>
+    
+
+</body>
+</html>
