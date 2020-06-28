@@ -41,8 +41,7 @@
         </ul>
         
         <div class="proof">
-            (a) The first part of this question is asking to show that given \(A =
-            A_1 \times A_2 \times \cdots\) and \(B = B_1 \times B_2 \times \cdots\), if \(B_{i} \subset A_{i}\), then \(B \subset A\). Remembering that 
+            (a) Remembering that 
 
             \[\prod\limits_{i \in \mathbb{Z}_{+}} S_{i} = S_1 \times S_2 \times \cdots\] 
 
@@ -51,6 +50,42 @@
             \in S_1, \omega_2 \in S_2, \cdots\), it follows that for any given
             \(\omega_{i} \in B_{i}\), \(\omega_{i}\) must also be in \(A_{i}\), and so any
             \((\omega_1, \omega_2, \cdots) \in B\) must also be in \(A\).
+        </div>
+
+        <div class="proof">
+            (b) Suppose \(B \subset A\) and \(B \subset A \not\Longrightarrow B_{i}
+            \subset A_{i} \ \forall i\). That would allow for the existence of some
+            \(\omega\)-tuple  \(\omega\) such that \(\omega_i \in B_1 \cup B_2 \cup \cdots\) and
+            \(\omega_{i} \not\in A_1 \cup A_2 \cup \cdots\). This is a clear contradiction, as
+            such a tuple would be an element of \(B\) and not an element of \(A\). 
+        </div>
+
+        <div class="proof">
+            (c) Suppose \(A_{k} =
+	        \varnothing\) for some \(k \in \mathbb{Z}_{+}\). Then, since \(A\) is
+	        defined as the set of all \(\omega\)-tuples such that \(\omega_{i}
+	        \in A_{i}\), and since there is no element \(\omega_{k}\) such
+	        that \(\omega_{k} \in A_{k}\), there can be no such tuple. Thus,
+	        Every \(A_{i}\) must be nonempty. The converse is also true. If
+	        each \(A_{i}\) is nonempty, then there are elements \(\omega_{i} \in
+	        A_{i}\) for each \(i\), and so the  \(\omega\)-tuple \(\omega\) can
+	        exist. 
+        </div>
+
+        <div class="proof">
+            (d) In short, \(A \cup B \subset \prod\limits_{i \in \mathbb{Z}_{+}}
+            A_{i} \cup B_{i}\). This is because the latter contains all of \(A\) and all
+            of \(B\), but can also contain elements not in either; tuples which contain
+            elements from both \(A_1 \cup A_2 \cup \cdots\) and \(B_1 \cup B_2 \cup
+            \cdots\), may not be in either, for example. (I know this isn't a rigorous
+            "proof", but it's 2 in the morning and I'm tired)\\
+
+
+            On the other hand, \(\prod\limits_{i \in \mathbb{Z}_{+}}
+            A_{i} \cap B_{i} = A \cap B\):
+
+            \[A \cap B \iff \omega \in A \textrm{ and } \omega \in B \iff \omega_i \in
+            A_i \textrm{ and } \omega_{i} \in B_{i} \ \forall i \iff \prod\limits_{i \in \mathbb{Z}_{+}} A_{i}\]
 
         </div>
 
