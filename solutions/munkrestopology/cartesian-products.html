@@ -39,7 +39,7 @@
                 A_{i} \cap B_{i}.\]
             </b></li>
         </ul>
-        
+        <br>
         <div class="proof">
             (a) Remembering that 
 
@@ -51,7 +51,7 @@
             \(\omega_{i} \in B_{i}\), \(\omega_{i}\) must also be in \(A_{i}\), and so any
             \((\omega_1, \omega_2, \cdots) \in B\) must also be in \(A\).
         </div>
-
+        <br><br>
         <div class="proof">
             (b) Suppose \(B \subset A\) and \(B \subset A \not\Longrightarrow B_{i}
             \subset A_{i} \ \forall i\). That would allow for the existence of some
@@ -59,7 +59,7 @@
             \(\omega_{i} \not\in A_1 \cup A_2 \cup \cdots\). This is a clear contradiction, as
             such a tuple would be an element of \(B\) and not an element of \(A\). 
         </div>
-
+        <br><br>
         <div class="proof">
             (c) Suppose \(A_{k} =
 	        \varnothing\) for some \(k \in \mathbb{Z}_{+}\). Then, since \(A\) is
@@ -71,21 +71,37 @@
 	        A_{i}\) for each \(i\), and so the  \(\omega\)-tuple \(\omega\) can
 	        exist. 
         </div>
-
+        <br><br>
         <div class="proof">
-            (d) In short, \(A \cup B \subset \prod\limits_{i \in \mathbb{Z}_{+}}
-            A_{i} \cup B_{i}\). This is because the latter contains all of \(A\) and all
-            of \(B\), but can also contain elements not in either; tuples which contain
-            elements from both \(A_1 \cup A_2 \cup \cdots\) and \(B_1 \cup B_2 \cup
-            \cdots\), may not be in either, for example. (I know this isn't a rigorous
-            "proof", but it's 2 in the morning and I'm tired). 
+            (d) The fourth part of the problem is asking us to describe the
+            relationship between \(A \cup B\) and  \(\prod\limits_{i \in \mathbb{Z}_{+}}
+            A_{i} \cup B_{i}\), and \(A \cap B\) and \(\prod\limits_{i \in \mathbb{Z}_{+}}
+            A_{i} \cap B_{i}\). <br><br>
 
+
+            In short, \(A \cup B \subset \prod\limits_{i \in \mathbb{Z}_{+}}
+            A_{i} \cup B_{i}\):
+            \[
+            \omega \in A \cup B \implies \omega \in A \textrm{ or } B \implies
+            \omega_{i} \in A_{i} \textrm{ or } \omega_{i} \in B_{i} \implies \prod\limits_{i \in \mathbb{Z}_{+}} A_{i} \cup B_{i}
+            .\] 
+
+            However, so long as \(A_1 \cup A_2 \cup \cdots \not\subset B_1 \cup B_2 \cup \cdots\) and  \(B_1 \cup B_2 \cup \cdots \not\subset A_1 \cup A_2 \cup \cdots\), there
+            can exist some element \(\omega \in \prod\limits_{i \in \mathbb{Z}_{+}}
+            A_{i} \cup B_{i}\) such that some 
+            \(\omega_{i} \in A_1 \cup A_2 \cup \cdots \textrm{ and } \omega_{i}
+            \not\in B_1 \cup B_2 \cup \cdots\) for some \(i\), and  \(\omega_{k}
+            \not\in A_1 \cup A_2 \cup \cdots \textrm{ and } \omega_{i} \in B_1 \cup
+            B_2 \cup \cdots\) for some \(k\). This element would not be in either
+            \(B\) or  \(A\), proving the claim.\\ 
 
             On the other hand, \(\prod\limits_{i \in \mathbb{Z}_{+}}
             A_{i} \cap B_{i} = A \cap B\):
-
-            \[\omega \in A \cap B \iff \omega \in A \textrm{ and } \omega \in B \iff \omega_i \in
-            A_i \textrm{ and } \omega_{i} \in B_{i} \ \forall i \iff \omega \in \prod\limits_{i \in \mathbb{Z}_{+}} A_{i} \cap B_i\]
+            \[
+            \omega \in A \cap B \iff \omega \in A \textrm{ and } \omega \in B \iff
+            \omega_i \in A_i \textrm{ and } \omega_{i} \in B_{i} \ \forall i \iff
+            \omega \in \prod\limits_{i \in \mathbb{Z}_{+}} A_{i} \cap B_{i}
+            \]
 
         </div>
 
