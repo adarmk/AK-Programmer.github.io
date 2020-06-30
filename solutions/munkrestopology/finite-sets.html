@@ -25,8 +25,88 @@
             \(\omega_{i} \in X \forall i\), let us define a proper subset of
             \(X\),  \(X - \{x_o\}\) where \(x_{o} \in X\).
         </div>
- 
+
         <br><br>
+
+        <b>Problem 4: Let \(A\) be a nonempty finite simply ordered set.
+            <ul>
+                <li>(a) Show that \(A\) has a largest element.</li>
+                <li>(b) Show that \(A\) has the order type of a section of the positive integers.</li>
+            </ul>
+        </b>
+
+        <div class="proof">
+                The first part of the question asks us to show that \(A\) has a
+        largest element. Since  \(A\) is finite and simply ordered, we can
+        define the order-preserving bijection  \(f: A \rightarrow \{1,
+        \ldots, n\}\). Since \(n\) is the largest element in the image and
+        \(f\) is a bijection, it follows that  \(f^{-1}(n)\) is the largest
+        element in \(A\). The second part of the question is asking us to
+        show that \(A\) has the order type of a section of the positive
+        integers. This is fairly obvious since we're able to construct an
+        order-preserving bijection. 
+        </div>
+
+        <br><br>
+
+        <b>Problem 6:
+            <ul>
+                <li>(a) Let \(A = \{1, \ldots, n\}\). Show there is a bijection of \(\mathcal{P}(A)\) with the cartesian product \(X^n\) where \(X = \{0, 1\}\).</li>
+                <li>(b) Show that if \(A\) is finite, then \(\mathcal{P}(A)\) is finite.</li>
+            </ul>
+        </b>
+
+        <div class="proof">
+            (a) The question is asking us to show that, given  \(A = \{1, \ldots, n\}\),
+            there is a bijection between \(\mathcal{P}(A)\) and the cartesian product
+            \(X^{n}\) where \(X = \{0, 1\}\). To do this, we must show that the
+            two sets have the same cardinality.
+
+            We know that, given \(A= \{1, \ldots, n\}\), the cardinality of
+            \(\mathcal{P}(A)\) is  \(2^{n}\). So we must prove that the
+            cardinality of \(X^n\) is also  \(2^{n}\). To be thorough, we will
+            also prove the cardinality of the power set.
+
+            Starting with \(\mathcal{P}(A)\), given \(A = \{1\}\),
+            \(\mathcal{P}(A) = \{\varnothing, \{1\}\}\), which validates our
+            claim (\(2^{1} = 2\)). Having shown this for \(n\), we show
+            that this is also true for \(n+1\).
+
+            Let \(B = \{1, \ldots, n, n+1\}\). Then \(\mathcal{P}(B)\) contains
+            every \(s \in \mathcal{P}(A)\), and, since \(B = A \cup \{n+1\}\),
+            \(\mathcal{P}(B)\) also contains every \(s \cup \{n+1\}\) (for every
+            \(s \in \mathcal{P}(A)\), we can define a  \(s \cup \{n+1\} \in
+            \mathcal{P}(B)\) ). 
+            Thus, since there are the same number of elements \(s\) as there 
+            are \(s \cup\{n+1\}\), \(B\)'s cardinality is precisely double the 
+            cardinality of \(A\). <br><br>
+
+            Now onto \(X^{n}\). For \(n=1\), the cardinality of \(X^{n}\) is 2, 
+            since \(X^{1} = X\).Having shown this is true for \(n\), we
+            show it is true for\(n+1\). 
+
+            Any tuple in  \(X^{n+1}\) takes on the form \((x_1, x_2, \ldots, x_n,
+            x_{n+1})\) where the elements \((x_1, \ldots, x_{n})\) correspond to
+            a tuple in \(X^{n}\). Thus, half the tuples in \(X^{n+1}\) take on
+            the form \((x_1, x_2, \ldots, 0)\), and half take on the form
+            \((x_1, x_2, \ldots, 1)\), meaning that \(X^{n+1}\) has double the
+            cardinality of \(X^{n}\). If  \(|X^{n}|=2^{n}\), and
+            \(|X^{n+1}|=2|X^{n}|\), then the cardinality of \(X^{n+1}\) also
+            follows the \(2^{n}\) rule. 
+
+            Thus, since both \(\mathcal{P}(A)\) and \(X^{n}\) have the same
+            cardinality, we can find a bijection between the two sets. An
+            example of such a bijection would be a function that converts
+            numbers in base 10 to binary numbers. 
+        </div>
+
+        <div class="proof">
+            (b) If \(A\) is finite, then \(|A| = n, n \in \mathbb{Z}_+ \implies
+            |\mathcal{P}(A)| = 2^{n}\).
+        
+        </div>
+
+
 
     </p>
     
