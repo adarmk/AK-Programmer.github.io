@@ -75,39 +75,36 @@
             \(\bigcap \mathscr{T}_{\alpha}\), since it is by
             definition the largest set which is contained in every
             \(\mathscr{T}_{\alpha}\), and it is itself a topology,
-            as proved <br><br>
+            as proved above.<br><br>
         
             The unique smallest topology containing all
-            \(\mathscr{T}_{\alpha}\) would be the collection 
-            \[
-            T = \bigcup
-            \mathscr{T}_{\alpha} \cup \{x \subset X \ | \ x = y \cup z
-            \textrm{ for some } y \in \mathscr{T}_{\alpha}, z \in
-            \mathscr{T}_{\beta}\} \cup \{a \subset X \ | \ a = y \cap z
-            \textrm{ for some } y \in \mathscr{T}_{\alpha}, z \in
-            \mathscr{T}_{\beta}\}
-            .\] 
-        
-            This is in fact a topology, as one can check. All that is left
-            to show is that it is the smallest topology containing all of
-            \(\{\mathscr{T}_{\alpha}\}\). <br><br>
-        
-            Suppose there was a topology \(T'\) which contained all of
-            \(\{\mathscr{T}_{\alpha}\}\) and was smaller than \(T\). This
-            would imply that \(T\) contains elements which aren't in \(T'\).
-        
-            If \(T'\) doesn't contain some or all elements of \(\bigcup
-            \mathscr{T}_{\alpha}\), then it doesn't contain every
-            \(T_{\alpha}\), and so we have a contradiction. 
-        
-            If \(T'\) doesn't contain some or all elements of \(\{x \subset X | \ x = y \cup z \textrm{ for some } y \in \mathscr{T}_{\alpha}, z \in
-            \mathscr{T}_{\beta}\}\), then it's not a topology as not all
-            unions of elements of \(T\) are in \(T\). The same applies to
-            \(\{a \subset X \ | \ a = y \cap z
-            \textrm{ for some } y \in \mathscr{T}_{\alpha}, z \in
-            \mathscr{T}_{\beta}\}\). Thus, there can be no topology smaller
-            than \(T\) that contains all of \(\{\mathscr{T}_{\alpha}\}\)
-            \end{proof}
+            \(\mathscr{T}_{\alpha}\), which we shall call \(T\), is the 	
+            topology generated
+            by the subbasis \(\bigcup \mathscr{T}_{\alpha}\). <br><br> 
+            
+            
+            By definition, \(T\) would contain every \(x \in
+            \mathscr{T}_{\alpha} \forall \alpha\), every possible finite
+            intersection of \(\bigcup \mathscr{T}_{\alpha}\), and
+            every possible union of the finite intersections. <br><br>
+
+            Now we are left to prove that this is in fact the smallest
+            topology containing every \(\mathscr{T}_{\alpha}\). <br><br>
+            
+            Suppose \( T'\) is a topology that is smaller than \(T\)
+            and contains all of \(\{\mathscr{T}_{\alpha}\}\). Then
+            there must be elements of \(T\) which are not in \(T'\).
+            If \(T'\) does not contain any \(x \in
+            \mathscr{T}_{\alpha}\) for any \(\alpha\), then it does
+            not contain all of \(\{\mathscr{T}_{\alpha}\}\). If it
+            does not contain some finite intersection of the elements
+            of  \(\bigcup \mathscr{T}_{\alpha}\), then it is not a
+            topology by definition. If it does not contain some
+            union of the finite intersections of  \(\bigcup
+            \mathscr{T}_{\alpha}\), then it is not a topology by
+            definition. Thus, \(T\) must be the smallest topology
+            which contains all of \(\{\mathscr{T}_{\alpha}\}\).
+
         
         </div>
         <br><br>
