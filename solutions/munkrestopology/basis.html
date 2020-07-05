@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basis for a Topology</title>
+    <link rel="stylesheet" href="https://latex.now.sh/style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <div class="author">
+        <h2>Munkres - Basis for a Topology</h2>
+        <p class="author"><a href="../../index.html">Adar Kahiri</a> <br> July 2020</p>
+    </div>
+
+    <p> <b>Problem 4:
+        <ul>
+            <li>
+                (a) If \(\{\mathscr{T}_{\alpha}\}\) is a family of topologies on \(X\), show that \(\bigcap \mathscr{T}_{\alpha}\) is a topology on \(X\). Is the same
+                true for \(\bigcup \mathscr{T}_{\alpha}\)?
+            </li>
+
+            <li>
+                (b) Let \(\{\mathscr{T}_{\alpha}\}\) be a family of topologies on \(X\). Show that there is a unique smallest topology on \(X\) containing all collections 
+                \(\mathscr{T}_{\alpha}\), and a unique largest topology contained in all \(\mathscr{T}_{\alpha}\). 
+            </li>
+        </ul>
+    </b> 
+
+        <br>
+        <div class="proof">
+            (a) All we must do is show that the intersection of the topologies
+            has the properties of a topology: 
+            <ol>
+                <li>
+                    \(\varnothing\) and \(X\) are clearly in \(\bigcap
+                    \mathscr{T}_{\alpha}\) since they are both in
+                    every \(\mathscr{T}_{\alpha}\) by definition. 
+                </li>
+                <li>
+                    Let \(x, y \in \bigcap
+                    \mathscr{T}_{\alpha}\). Since both
+                    \(x\) and \(y\) are contained in every
+                    \(\mathscr{T}_{\alpha}\), their union is
+                    also contained in every
+                    \(\mathscr{T}_{\alpha}\) by definition. 
+                </li>
+                <li>
+                    Since both \(x\) 
+                    and \(y\) are contained in every
+                    \(\mathscr{T}_{\alpha}\), their
+                    intersection is also contained in every
+                    \(\mathscr{T}_{\alpha}\) by definition. 
+                </li>
+            </ol>
+
+            The same is not true for \(\bigcup \mathscr{T}_{\alpha}\)
+            unless there is one \(\mathscr{T}_{\alpha}\) that
+            contains all the other topologies. For example, suppose
+            you have \(x \in \mathscr{T}_{\alpha}\) and \(y \in
+            \mathscr{T}_{\beta}\). Unless \(y \in
+            \mathscr{T}_{\alpha}\) or \(x \in \mathscr{T}_{\beta}\), 
+            \(x \cup y\) isn't necessarily in \(\mathscr{T}_{\alpha} \cup
+            \mathscr{T}_{\beta}\), 
+            and so the second condition for a topology is not satisfied. 
+        </div>
+        
+        <br>
+        <div class="proof">
+            (b) The unique largest topology contained in all
+            \(\mathscr{T}_{\alpha}\) would be
+            \(\bigcap \mathscr{T}_{\alpha}\), since it is by
+            definition the largest set which is contained in every
+            \(\mathscr{T}_{\alpha}\), and it is itself a topology,
+            as proved <br><br>
+        
+            The unique smallest topology containing all
+            \(\mathscr{T}_{\alpha}\) would be the collection 
+            \[
+            T = \bigcup
+            \mathscr{T}_{\alpha} \cup \{x \subset X \ | \ x = y \cup z
+            \textrm{ for some } y \in \mathscr{T}_{\alpha}, z \in
+            \mathscr{T}_{\beta}\} \cup \{a \subset X \ | \ a = y \cap z
+            \textrm{ for some } y \in \mathscr{T}_{\alpha}, z \in
+            \mathscr{T}_{\beta}\}
+            .\] 
+        
+            This is in fact a topology, as one can check. All that is left
+            to show is that it is the smallest topology containing all of
+            \(\{\mathscr{T}_{\alpha}\}\). <br><br>
+        
+            Suppose there was a topology \(T'\) which contained all of
+            \(\{\mathscr{T}_{\alpha}\}\) and was smaller than \(T\). This
+            would imply that \(T\) contains elements which aren't in \(T'\).
+        
+            If \(T'\) doesn't contain some or all elements of \(\bigcup
+            \mathscr{T}_{\alpha}\), then it doesn't contain every
+            \(T_{\alpha}\), and so we have a contradiction. 
+        
+            If \(T'\) doesn't contain some or all elements of \(\{x \subset X | \ x = y \cup z \textrm{ for some } y \in \mathscr{T}_{\alpha}, z \in
+            \mathscr{T}_{\beta}\}\), then it's not a topology as not all
+            unions of elements of \(T\) are in \(T\). The same applies to
+            \(\{a \subset X \ | \ a = y \cap z
+            \textrm{ for some } y \in \mathscr{T}_{\alpha}, z \in
+            \mathscr{T}_{\beta}\}\). Thus, there can be no topology smaller
+            than \(T\) that contains all of \(\{\mathscr{T}_{\alpha}\}\)
+            \end{proof}
+        
+        </div>
+        <br><br>
+
+        
+        
+
+
+    </p>
+    
+
+</body>
+</html>
