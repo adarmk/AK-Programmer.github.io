@@ -4,25 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adar Kahiri</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@300;600&display=swap" rel="stylesheet">
 </head>
 
 <style>
     body {  
-        background-color: rgb(32, 32, 32); 
+        background-color: #f7f7f7;
         min-width: 450px; 
         margin-left: 20%; 
         margin-right: 20%; 
-        font-family: 'Lato', sans-serif
+        font-family: 'Roboto Slab', 'serif';
         }
 
     h1 { 
-        color: white;
         font-family: 'Roboto Slab', 'serif';
     }
 
     h3 { 
-        color: white;
         font-family: 'Roboto Slab', 'serif';
     }
 
@@ -36,7 +34,7 @@
     }
 
     a {
-        color: #94d4ff;
+        color: #529cce;
     }
 
     a:hover {
@@ -45,37 +43,39 @@
 
     p {
         font-weight: 300; 
-        color: #ffffff;
     }
 
-    ::selection {
-        color: black;
-        background-color: white;
+    nav {
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+    }
+
+    .nav-item {
+        margin-right: 30px;
+        font-size: 16px;
+
     }
 
 </style>
 <body>
     <h1 style="margin-bottom: 10px;">Adar Kahiri</h1>
+    
+    <nav>
+        <a class="nav-item" href="./blog.html"><b>Blog</b></a>
+        <a class="nav-item" href="https://twitter.com/adarkahiri"><b>Tweeter</b></a>
+        <a class="nav-item" href="https://github.com/AK-Programmer"><b>Github</b></a>
+        <a class="nav-item" href="./solutions.html"><b>Solutions Manual</b></a>
+    </nav>
+
     <h3>About</h3>
     <p>
-        Hey, I'm a 16 year old high school student who's interested in physics, math, and programming, among other things. I also like playing piano, music,  
-        martial arts, hiking, biking, and doing pretty much anything else outdoors.<br><br>
+        Hey! I'm a 16 year old interested in learning about and ultimately creating cool stuff. Among that 'stuff' is mathematics, physics, music, and programming, but this is not nearly 
+        an exhaustive list. I also love physically exerting myself and have trained in various martial arts for a total of about 10 years. <br><br>
 
-        Check out <a href="./solutions.html">this log</a> of some of my solutions to various fun problems!<br><br>
+        Currently, I spend most of my time learning math and indulging myself in a few hobbies. I also love meeting new people, so if you'd like to reach out, do message me on Twitter or email me at 
+        <a href="mailto:adar.kahiri4@gmail.com">adar.kahiri4@gmail.com</a>. 
+
     </p>
-
-    <hr>
-
-    <div>
-        <h3>Noteworthy online footprints</h3>
-
-        <ul>
-            <li><a href="https://twitter.com/adarkahiri" target="_blank">Twitter</a></li>
-            <li><a href="https://github.com/AK-Programmer" target="_blank">Github</a></li>
-            <li><a href="./blog.html">Blog</a></li>
-        </ul>
-    </div>
-
-    <hr>
 </body>
 </html>
