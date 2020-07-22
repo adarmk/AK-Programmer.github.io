@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closed Sets and Limit Points</title>
+    <link rel="stylesheet" href="https://latex.now.sh/style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <div class="author">
+        <h2>Closed Sets and Limit Points</h2>
+        <p class="author"><a href="../../index.html">Adar Kahiri</a> <br> July 2020</p>
+    </div>
+
+    <p> 
+        <b>
+            Problem 5: Let \(X\) be an ordered set in the order topology. 
+            Show that \(\overline{(a, b)} \subset [a, b]\). Under what 
+            conditions does the equality hold?
+        </b>
+
+        <div class="proof">
+            Theorem 17.6 in the book states that, given a subset 
+            \(A\) of \(X\), and given the set \(A'\) of all limit points of 
+            \(A\), \(\overline{A} = A \cup A'\). \((a, b)\) is clearly in \([a, b]\), so we just 
+            need to prove that if \(x\) is a limit point of \((a,b)\), it is in \([a, b]\). <br><br>
+
+            Let \(x\) be a limit point of \((a, b)\), and suppose it is not in \([a, b]\). Then, 
+            either \(x < a\) or \(x > b\). This would allow for the existence of neighbourhood(s) of 
+            \(x\) (such as \(\{p | p< a\}\) if \(x < a\) and \(\{p | p>b\}\) if \(x>b\)) that do not intersect 
+            any points of<br> \((a, b)\), which contradicts our assumption that \(x\) is a limit point. Thus, any limit 
+            point of \((a, b)\) must be in \([a, b]\).
+        </div>
+    </p>
+
+        
+        
+
+
+    </p>
+    
+
+</body>
+</html>
