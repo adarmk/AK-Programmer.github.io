@@ -16,7 +16,34 @@
         <p class="author"><a href="../../index.html">Adar Kahiri</a> <br> July 2020</p>
     </div>
 
-    <p> <b>Problem 11:
+    <p> 
+        <b> 
+            Problem 1: Prove that for functions 
+            \(f: \mathbb{R} \rightarrow \mathbb{R}\), the 
+            \(\epsilon-\delta\) definition of continuity implies the open 
+            set definition.
+        </b><br><br>
+        
+        The \(\epsilon-\delta\) definition: A map \(f: \mathbb{R} \rightarrow \mathbb{R}\) is continuous 
+        if for all \(x\) in the domain, 
+
+        \[\forall \epsilon > 0, \exists \ \delta > 0 \textrm{ such that } |y-x| < \delta \implies |f(y) - f(x)| < \epsilon\]
+
+        The open set definition: Let \(X\) and \(Y\) be topological spaces. 
+        \(f: X \rightarrow Y\) is continuous if for each open subset 
+        \(V\) of \(Y\), \(f^{-1}(V)\) is an open subset of \(X\). <br>
+
+        <div class="proof">
+            For some \(x_0 \in \mathbb{R}\) and some 
+            \(\epsilon > 0\), let \(V = (f(x_0) - \epsilon, f(x_0) + \epsilon)\). We show that \(f^{-1}(V)\) is open. 
+            By the \(\epsilon-\delta\) definition, for any \(x \in f^{-1}(V)\), there exists a \(\delta > 0\) such that 
+            for any \(y \in (x - \delta, x + \delta)\), \(f(y) \in V\). This means that \((x - \delta, x + \delta)\) must be 
+            in \(f^{-1}(V)\). Since there is such an open set for every \(x \in f^{-1}(V)\), \(f^{-1}(V)\) is a union of open sets and 
+            is therefore open. 
+        </div>
+        
+        <br><br>
+        <b>Problem 11:
         Let \(F: X \times Y \rightarrow Z\). \(F\) is continuous in each variable separately if 
         for each \(y_0\) in \(Y\), the map \(h: X \rightarrow Z\) defined by \(h(x)=F(x \times y_0)\) 
         is continuous, and for each \(x_0\) in \(X\), the map \(k: Y \rightarrow Z\) defined by \(k(y) = f(x_0 \times y\) 
