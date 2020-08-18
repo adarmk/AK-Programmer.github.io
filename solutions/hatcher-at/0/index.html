@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Problem 10 Show that a space \(X\) is contractible if and only if every map \(f: X \rightarrow Y\), for arbitrary \(Y\), is nullhomotopic. Similarly, show \(X\) is contractible if and only if every map \(f: Y \rightarrow X\) is nullhomotopic. I will assume that by &#39;every map&#39; Hatcher means &#39;every continuous map&#39;. If \(X\) is contractible, then its identity map \(\mathbb{I}: X \rightarrow X\) is nullhomotopic. Let \(h: X \times I \rightarrow X\) be a homotopy between \(\mathbb{I}\) and a constant map (that&#39;s what it means for a function to be nullhomotopic). ">
+
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+    
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+    
+    <title>Adar Kahiri | Problems</title>
+</head><body><h1 style="margin-bottom: 10px;">Adar Kahiri</h1>
+    
+    <nav>
+        
+            <a class="nav-item" href="/"><b>About</b></a>
+        
+            <a class="nav-item" href="/blog/"><b>Blog</b></a>
+        
+            <a class="nav-item" href="/solutions/"><b>Solutions</b></a>
+        
+            <a class="nav-item" href="/updates/"><b>Updates</b></a>
+        
+    </nav><main id="content">
+    
+    <h2 class="blog-title">Problems</h2>
+<p class="date">August 2020</p>
+
+    <h4 id="problem-10">Problem 10</h4>
+
+<p>Show that a space <span  class="math">\(X\)</span> is contractible if and only if every map
+<span  class="math">\(f: X \rightarrow Y\)</span>, for arbitrary <span  class="math">\(Y\)</span>, is nullhomotopic. Similarly, show <span  class="math">\(X\)</span> is contractible if and only if
+every map <span  class="math">\(f: Y \rightarrow X\)</span> is nullhomotopic.
+<br><br></p>
+
+<p>I will assume that by 'every map' Hatcher means 'every continuous map'. If <span  class="math">\(X\)</span> is contractible, then its identity map
+<span  class="math">\(\mathbb{I}: X \rightarrow X\)</span> is nullhomotopic. Let <span  class="math">\(h: X \times I \rightarrow X\)</span> be a homotopy between <span  class="math">\(\mathbb{I}\)</span> and a constant map
+(that's what it means for a function to be nullhomotopic). Then the composite <span  class="math">\(fh: X \times I \rightarrow Y\)</span> is a homotopy from <span  class="math">\(f\)</span> to a constant map. Conversely,
+suppose <i>every</i> map <span  class="math">\(f: X \rightarrow Y\)</span> for arbitrary <span  class="math">\(Y\)</span> is nullhomotopic. Then the identity map falls under this category (we can just set <span  class="math">\(Y=X\)</span>), and <span  class="math">\(X\)</span> is
+therefore contractible. <br><br></p>
+
+<p>Next, we show that <span  class="math">\(X\)</span> is contractible if and only if every map <span  class="math">\(f: Y \rightarrow X\)</span> is nullhomotopic. Suppose <span  class="math">\(X\)</span> is contractible. Then we can define a homotopy
+<span  class="math">\(h: X \times I \rightarrow X\)</span> between the the identity and a constant map. It follows that the composite <span  class="math">\(hf\)</span> is a homotopy between <span  class="math">\(f\)</span> and a constant map (<span  class="math">\(h\)</span> is continuous,
+<span  class="math">\(h(f(Y), 0) = f(Y)\)</span> and <span  class="math">\(h(f(Y), 1) = c_0\)</span> for some point <span  class="math">\(c_0 \in X\)</span>. Conversely, if every map <span  class="math">\(f: Y \rightarrow X\)</span> is nullhomotopic, then, setting <span  class="math">\(Y=X\)</span>, the identity map
+must also be homotopic. <br><br></p>
+
+<p>I suspect I didn't use the proper notation here for composing functions where the domains of some functions are products, but the logic still holds (I hope!).</p>
+
+
+        </main></body>
+</html>

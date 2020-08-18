@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Section 20, Problem 8
+Let \(X\) be the subset of \(\mathbb{R}^{\omega}\) consisting of all sequences such that \(\sum x^2_i\) converges. Then the formula
+\[d(\textbf{x}, \textbf{y}) = \left[\sum\limits_{i=1}^{\infty} (x_i - y_i)^2\right]^{1/2}\]
+defines a metric on \(X\). \(X\) can inheret a subspace topology from the box, product, and uniform topologies on \(\mathbb{R}^{\omega}\) and it also has the topology given by \(d\), called the \(\ell^2\)-topology.
+ (a) Show that on \(X\), we have inclusions \(\textrm{box topology } \supset \ell^2 \textrm{-topology } \supset \textrm{ uniform topology}\) ">
+
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+    
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+    
+    <title>Adar Kahiri | Metric Spaces</title>
+</head><body><h1 style="margin-bottom: 10px;">Adar Kahiri</h1>
+    
+    <nav>
+        
+            <a class="nav-item" href="/"><b>About</b></a>
+        
+            <a class="nav-item" href="/blog/"><b>Blog</b></a>
+        
+            <a class="nav-item" href="/solutions/"><b>Solutions</b></a>
+        
+            <a class="nav-item" href="/updates/"><b>Updates</b></a>
+        
+    </nav><main id="content">
+    
+    <h2 class="blog-title">Metric Spaces</h2>
+<p class="date">July 2020</p>
+
+    <p><b> Section 20, Problem 8</b></p>
+
+<p>Let <span  class="math">\(X\)</span> be the subset of <span  class="math">\(\mathbb{R}^{\omega}\)</span> consisting of all sequences such that <span  class="math">\(\sum x^2_i\)</span> converges.
+Then the formula</p>
+
+<p><span  class="math">\[d(\textbf{x}, \textbf{y}) = \left[\sum\limits_{i=1}^{\infty} (x_i - y_i)^2\right]^{1/2}\]</span></p>
+
+<p>defines a metric on <span  class="math">\(X\)</span>. <span  class="math">\(X\)</span> can inheret a subspace topology from the box, product, and uniform topologies on <span  class="math">\(\mathbb{R}^{\omega}\)</span> and
+it also has the topology given by <span  class="math">\(d\)</span>, called the <span  class="math">\(\ell^2\)</span>-topology.</p>
+
+<ul>
+<li><p>(a) Show that on <span  class="math">\(X\)</span>, we have inclusions
+<span  class="math">\(\textrm{box topology } \supset \ell^2 \textrm{-topology } \supset \textrm{ uniform topology}\)</span></p></li>
+
+<li><p>(b) The set <span  class="math">\(\mathbb{R}^{\infty}\)</span> of all sequences (actually, <span  class="math">\(\omega\)</span>-tuples) that are zero for all but
+finitely many values is contained in <span  class="math">\(X\)</span>. Show that the four topologies <span  class="math">\(\mathbb{R}^{\infty}\)</span> can inherit
+from <span  class="math">\(X\)</span> are all distinct.</p></li>
+
+<li><p>(c) The set
+<span  class="math">\( H = \prod\limits_{n \in \mathbb{Z}_+}[0, 1/n]\)</span>
+is contained in <span  class="math">\(X\)</span> and called the Hilbert cube. Compare the four topologies that <span  class="math">\(H\)</span> inherits as a subspace of <span  class="math">\(X\)</span>.
+<br><br></p></li>
+</ul>
+
+<p>*This is a pretty long problem (meaning it's a bit of a pain to write out the solutions), and so I will return to finish the other two parts at another time.</p>
+
+<p>(a) Given the standard bounded metric on <span  class="math">\(\mathbb{R}\)</span>, <span  class="math">\(\overline{d}\)</span>, the uniform metric which induces the uniform topology on <span  class="math">\(\mathbb{R}^{\omega}\)</span> is</p>
+
+<p><span  class="math">\[\overline{p}(\textbf{x, y}) = \textrm{sup}\{\overline{d}(x_{\alpha}, y_{\alpha}) | \alpha \in \mathbb{Z}_+\}\]</span></p>
+
+<p>We assert that for every point <span  class="math">\(\textbf{x}\)</span> of every basis element <span  class="math">\(B_u\)</span> of the uniform topology, which we shall denote by <span  class="math">\(X_u\)</span>, there is a basis
+element <span  class="math">\(B_{\ell}\)</span> of the <span  class="math">\(\ell^2\)</span>-topology, which we shall denote by <span  class="math">\(X_{\ell}\)</span> such that <span  class="math">\(\textbf{x} \in B_{\ell} \subset B_u\)</span>.</p>
+
+<p>Let <span  class="math">\(B_{\overline{p}}(\textbf{y}, \epsilon)\)</span> be the <span  class="math">\(\epsilon\)</span>-ball
+centered at some <span  class="math">\(\textbf{y} \in X\)</span> for some <span  class="math">\(\epsilon > 0\)</span>. Then, given any <span  class="math">\(\textbf{x} \in B_{\overline{p}}(\textbf{y}, \epsilon)\)</span>, we can define
+the <span  class="math">\(\delta\)</span>-ball <span  class="math">\(B_d(\textbf{x}, \delta)\)</span> such that <span  class="math">\(\overline{p}(\textbf{x, y}) + \delta < \epsilon \)</span>. Such a ball will be contained in <span  class="math">\(B_{\overline{p}}(\textbf{y}, \epsilon)\)</span> so that we have <span  class="math">\(\textbf{x} \in B_d (\textbf{y}, \epsilon) \subset B_{\overline{p}}(\textbf{y}, \epsilon)\)</span> for each <span  class="math">\(\textbf{x} \in B_{\overline{p}}(\textbf{y}, \epsilon)\)</span>.</p>
+
+<p>Next, we have the inclusion of the <span  class="math">\(\ell^2\)</span>-topology in the box topology. We assert that for every point <span  class="math">\(\textbf{x}\)</span> of every basis element
+<span  class="math">\(B_{\ell}\)</span> of the <span  class="math">\(\ell^2\)</span>-topology, there is a basis element <span  class="math">\(B_b\)</span> of the box topology such that <span  class="math">\(\textbf{x} \in B_b \subset B_{\ell}\)</span>.</p>
+
+<p>Let <span  class="math">\(B_d (\textbf{y}, \epsilon)\)</span> be an <span  class="math">\(\epsilon\)</span>-ball in the <span  class="math">\(\ell^2\)</span>-topology centered at some <span  class="math">\(\textbf{y} \in X\)</span>. For any <span  class="math">\(\textbf{x} \in B_d (\textbf{y}, \epsilon)\)</span>,
+we can define the following basis element in the box topology: <span  class="math">\(B_b = (x_1 - \delta_1, x_1 + \delta_1) \times (x_2 - \delta_2, x_2 + \delta_2) \times \cdots\)</span> where <span  class="math">\(x_i\)</span> is the <span  class="math">\(i\)</span>-th
+coordinate of <span  class="math">\(\textbf{x}\)</span> such that
+<span  class="math">\(\sum \delta_i^2\)</span> converges and <span  class="math">\(d(\textbf{y, x}) + \sqrt{\sum \delta_i^2} < \epsilon\)</span>. Then <span  class="math">\(B_b\)</span> is contained in <span  class="math">\(B_d(\textbf{y}, \epsilon)\)</span> so that we have
+<span  class="math">\(\textbf{x} \in B_b \subset B_d(\textbf{y}, \epsilon)\)</span>. Geometrically, we can think of this as ensuring that the 'corners' of the infinite-dimensional 'rectangle' we've defined
+around <span  class="math">\(\textbf{x}\)</span> are always inside the infinite-dimensional ball we've defined around <span  class="math">\(\textbf{y}\)</span>, which subsequently ensures that every point of the rectangle is in the ball.</p>
+
+
+        </main></body>
+</html>

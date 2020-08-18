@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Topology by James Munkres on Adar Kahiri</title>
+    <link>http://adarkahiri.com/solutions/munkres-topology/</link>
+    <description>Recent content in Topology by James Munkres on Adar Kahiri</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Jul 2020 22:47:14 -0400</lastBuildDate>
+    
+	<atom:link href="http://adarkahiri.com/solutions/munkres-topology/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Metric Spaces</title>
+      <link>http://adarkahiri.com/solutions/munkres-topology/metric-spaces/</link>
+      <pubDate>Sat, 18 Jul 2020 15:13:23 -0400</pubDate>
+      
+      <guid>http://adarkahiri.com/solutions/munkres-topology/metric-spaces/</guid>
+      <description>Section 20, Problem 8
+Let \(X\) be the subset of \(\mathbb{R}^{\omega}\) consisting of all sequences such that \(\sum x^2_i\) converges. Then the formula
+\[d(\textbf{x}, \textbf{y}) = \left[\sum\limits_{i=1}^{\infty} (x_i - y_i)^2\right]^{1/2}\]
+defines a metric on \(X\). \(X\) can inheret a subspace topology from the box, product, and uniform topologies on \(\mathbb{R}^{\omega}\) and it also has the topology given by \(d\), called the \(\ell^2\)-topology.
+ (a) Show that on \(X\), we have inclusions \(\textrm{box topology } \supset \ell^2 \textrm{-topology } \supset \textrm{ uniform topology}\)</description>
+    </item>
+    
+    <item>
+      <title>Continuous Functions</title>
+      <link>http://adarkahiri.com/solutions/munkres-topology/continuous-functions/</link>
+      <pubDate>Sat, 18 Jul 2020 15:10:02 -0400</pubDate>
+      
+      <guid>http://adarkahiri.com/solutions/munkres-topology/continuous-functions/</guid>
+      <description>Problem 1: Prove that for functions \(f: \mathbb{R} \rightarrow \mathbb{R}\), the \(\epsilon-\delta\) definition of continuity implies the open set definition. 
+
+The \(\epsilon-\delta\) definition: A map \(f: \mathbb{R} \rightarrow \mathbb{R}\) is continuous if for all \(x\) in the domain,
+\[\forall \epsilon  0, \exists \ \delta  0 \textrm{ such that } |y-x| The open set definition: Let \(X\) and \(Y\) be topological spaces. \(f: X \rightarrow Y\) is continuous if for each open subset \(V\) of \(Y\), \(f^{-1}(V)\) is an open subset of \(X\).</description>
+    </item>
+    
+    <item>
+      <title>Closed Sets &amp; Limit Points</title>
+      <link>http://adarkahiri.com/solutions/munkres-topology/closed-sets-limit-points/</link>
+      <pubDate>Sat, 18 Jul 2020 15:06:21 -0400</pubDate>
+      
+      <guid>http://adarkahiri.com/solutions/munkres-topology/closed-sets-limit-points/</guid>
+      <description>Problem 5: Let \(X\) be an ordered set in the order topology. Show that \(\overline{(a, b)} \subset [a, b]\). Under what conditions does the equality hold? 
+Theorem 17.6 in the book states that, given a subset \(A\) of \(X\), and given the set \(A&#39;\) of all limit points of \(A\), \(\overline{A} = A \cup A&#39;\). \((a, b)\) is clearly in \([a, b]\), so we just need to prove that if \(x\) is a limit point of \((a,b)\), it is in \([a, b]\).</description>
+    </item>
+    
+    <item>
+      <title>Basis for a Topology</title>
+      <link>http://adarkahiri.com/solutions/munkres-topology/basis/</link>
+      <pubDate>Sat, 18 Jul 2020 15:02:25 -0400</pubDate>
+      
+      <guid>http://adarkahiri.com/solutions/munkres-topology/basis/</guid>
+      <description>Problem 4:
+ (a) If \(\{\mathscr{T}_{\alpha}\}\) is a family of topologies on \(X\), show that \(\bigcap \mathscr{T}_{\alpha}\) is a topology on \(X\). Is the same true for \(\bigcup \mathscr{T}_{\alpha}\)?
+ (b) Let \(\{\mathscr{T}_{\alpha}\}\) be a family of topologies on \(X\). Show that there is a unique smallest topology on \(X\) containing all collections \(\mathscr{T}_{\alpha}\), and a unique largest topology contained in all \(\mathscr{T}_{\alpha}\).
+  
+(a) All we must do is show that the intersection of the topologies has the properties of a topology:</description>
+    </item>
+    
+    <item>
+      <title>Finite Sets</title>
+      <link>http://adarkahiri.com/solutions/munkres-topology/finite-sets/</link>
+      <pubDate>Thu, 18 Jun 2020 14:55:10 -0400</pubDate>
+      
+      <guid>http://adarkahiri.com/solutions/munkres-topology/finite-sets/</guid>
+      <description>Problem 4: Let \(A\) be a nonempty finite simply ordered set.
+ (a) Show that \(A\) has a largest element. (b) Show that \(A\) has the order type of a section of the positive integers.  
+Since \(A\) is finite and simply ordered, we can define the order-preserving bijection \(f: A \rightarrow \{1, \ldots, n\}\). Since \(n\) is the largest element in the image and \(f\) is a bijection, it follows that \(f^{-1}(n)\) is the largest element in \(A\).</description>
+    </item>
+    
+    <item>
+      <title>Cartesian Product</title>
+      <link>http://adarkahiri.com/solutions/munkres-topology/cartesian-product/</link>
+      <pubDate>Thu, 18 Jun 2020 14:35:55 -0400</pubDate>
+      
+      <guid>http://adarkahiri.com/solutions/munkres-topology/cartesian-product/</guid>
+      <description>Problem 1: Show there is a bijective correspondence of \(A \times B\) with \(B \times A\) Since \((a, b) \in A \times B \iff (b, a) \in B \times A\), we can map any element \((a, b)\) to the element \((b, a)\) and vice versa, and so there is clearly a bijective correspondence between the two sets. 
+
+Problem 3: Let \(A = A_1 \times A_2 \times \cdots\) and \(B = B_1 \times B_2 \times \cdots\)</description>
+    </item>
+    
+    <item>
+      <title>The Integers and Real Numbers</title>
+      <link>http://adarkahiri.com/solutions/munkres-topology/z-and-r/</link>
+      <pubDate>Thu, 18 Jun 2020 14:29:49 -0400</pubDate>
+      
+      <guid>http://adarkahiri.com/solutions/munkres-topology/z-and-r/</guid>
+      <description>Problem 4: Prove by induction that given \(n \in \mathbb{Z}_+\), every nonempty subset of \(\{1, \ldots, n\}\) has a largest element. Explain why you cannot conclude from this fact that every nonempty subset of \(\mathbb{Z}_+\) has a largest element. 
+
+We can use an argument symmetrical to what Munkres used to prove the well-ordering property. Let \(A\) be the set of all \(n \in \mathbb{Z}_+\) for which \(S_{n+1} = \{1, \ldots, n\}\) has a largest element.</description>
+    </item>
+    
+    <item>
+      <title>Relations</title>
+      <link>http://adarkahiri.com/solutions/munkres-topology/relations/</link>
+      <pubDate>Thu, 18 Jun 2020 00:58:03 -0400</pubDate>
+      
+      <guid>http://adarkahiri.com/solutions/munkres-topology/relations/</guid>
+      <description>Problem 14: If \(C\) is a relation on set \(A\), define a new relation \(D\) on \(A\) by letting \((b, a) \in D\) if \((a, b) \in C\).
+(a) Prove that \(C\) is symmetric if and only if \(C = D\) (b) Show that if \(C\) is an order relation, then \(D\) is an order relation. (c) Prove that if an ordered set \(A\) has the greatest lower bound (GLB) property, then it has the least upper bound (LUB) property.</description>
+    </item>
+    
+    <item>
+      <title>Functions</title>
+      <link>http://adarkahiri.com/solutions/munkres-topology/functions/</link>
+      <pubDate>Thu, 18 Jun 2020 00:36:48 -0400</pubDate>
+      
+      <guid>http://adarkahiri.com/solutions/munkres-topology/functions/</guid>
+      <description>Problem 1: Let \(f: A \rightarrow B\). Let \(A_0 \subset A\) and \(B_0 \subset B\). 
+ (a) Show that \(A_0 \subset f^{-1}(f(A_0))\) and that equality holds if \(f\) is injective. (b) Show that \(f(f^{-1}(B_0)) \subset B_0\) and that equality holds if \(f\) is surjective.  
+Let&#39;s start off by defining \(f\) and \(f^{-1}\). Given \(f: A \rightarrow B\), \(A_0 \subset A\), and \(B_0 \subset B\), \(f(A_0) = \{b \ | \ b=f(a) \ \textrm{for at least one}\ a \in A_0\}\) \(f^{-1}(B_0)=\{ a \ | \ f(a) \in B_0 \}\)</description>
+    </item>
+    
+    <item>
+      <title>Fundamentals</title>
+      <link>http://adarkahiri.com/solutions/munkres-topology/fundamentals/</link>
+      <pubDate>Wed, 17 Jun 2020 23:58:38 -0400</pubDate>
+      
+      <guid>http://adarkahiri.com/solutions/munkres-topology/fundamentals/</guid>
+      <description>Problem 1: Check the distributive laws for \(\cup\) and \(\cap\), and DeMorgan&#39;s laws. Starting with the first distributive law,
+\[A \cap (B \cup C) = (A \cap B) \cup (A\cap C)\]
+\[x \in A \cap (B \cup C) \iff x \in A \ \textrm{and} \ (x \in B \ \textrm{or} \ x \in C)\]
+\[\iff (x \in A \ \textrm{and} \ x \in B) \ \textrm{or} \ (x \in A \ \textrm{and} \ x \in C) \iff (A \cap B) \cup (A\cap C)\]</description>
+    </item>
+    
+  </channel>
+</rss>

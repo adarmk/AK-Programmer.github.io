@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Problem 1: Show there is a bijective correspondence of \(A \times B\) with \(B \times A\) Since \((a, b) \in A \times B \iff (b, a) \in B \times A\), we can map any element \((a, b)\) to the element \((b, a)\) and vice versa, and so there is clearly a bijective correspondence between the two sets. 
+
+Problem 3: Let \(A = A_1 \times A_2 \times \cdots\) and \(B = B_1 \times B_2 \times \cdots\) ">
+
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+    
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+    
+    <title>Adar Kahiri | Cartesian Product</title>
+</head><body><h1 style="margin-bottom: 10px;">Adar Kahiri</h1>
+    
+    <nav>
+        
+            <a class="nav-item" href="/"><b>About</b></a>
+        
+            <a class="nav-item" href="/blog/"><b>Blog</b></a>
+        
+            <a class="nav-item" href="/solutions/"><b>Solutions</b></a>
+        
+            <a class="nav-item" href="/updates/"><b>Updates</b></a>
+        
+    </nav><main id="content">
+    
+    <h2 class="blog-title">Cartesian Product</h2>
+<p class="date">June 2020</p>
+
+    <p><b>Problem 1: Show there is a bijective correspondence of <span  class="math">\(A \times B\)</span> with <span  class="math">\(B \times A\)</span></b>
+<br><br>
+Since <span  class="math">\((a, b) \in A \times B \iff (b, a) \in B \times A\)</span>, we can map any element
+<span  class="math">\((a, b)\)</span> to the element  <span  class="math">\((b, a)\)</span> and vice versa, and so there is clearly a bijective
+correspondence between the two sets.
+</div></p>
+
+<p><br><br></p>
+
+<p><b>Problem 3: Let <span  class="math">\(A = A_1 \times A_2 \times \cdots\)</span> and <span  class="math">\(B = B_1 \times B_2 \times \cdots\)</span></b></p>
+
+<ul>
+<li>(a) Show that if <span  class="math">\(B_i \subset A_i\)</span> for all <span  class="math">\(i\)</span>, then <span  class="math">\(B \subset A\)</span></li>
+<li>(b) Show the converse of (a) holds if <span  class="math">\(B\)</span> is nonempty.</li>
+<li>(c) Show that if <span  class="math">\(A\)</span> is nonempty, each <span  class="math">\(A_i\)</span> is nonempty. Does the converse hold?</li>
+<li>(d) What is the relation between the set <span  class="math">\( A \cup B \)</span> and the cartesian product <span  class="math">\( \prod_{i \in \mathbb{Z}_+} A_i \cup B_i \)</span>? What is the
+relation between the set <span  class="math">\(A \cap B\)</span> and the cartesian product  <span  class="math">\(\prod_{i \in \mathbb{Z}_{+}} A_{i} \cap B_{i}\)</span>.</li>
+</ul>
+
+<p><br></p>
+
+<p>(a) Remembering that</p>
+
+<p><span  class="math">\[\prod\limits_{i \in \mathbb{Z}_{+}} S_{i} = S_1 \times S_2 \times \cdots\]</span></p>
+
+<p>is defined as the set of all <span  class="math">\(\omega\)</span>-tuples  <span  class="math">\((\omega_1, \omega_2,
+\cdots)\)</span> of elements of <span  class="math">\(S_1 \cup S_2 \cup \cdots\)</span> such that <span  class="math">\(\omega_1
+\in S_1, \omega_2 \in S_2, \cdots\)</span>, it follows that for any given
+<span  class="math">\(\omega_{i} \in B_{i}\)</span>, <span  class="math">\(\omega_{i}\)</span> must also be in <span  class="math">\(A_{i}\)</span>, and so any
+<span  class="math">\((\omega_1, \omega_2, \cdots) \in B\)</span> must also be in <span  class="math">\(A\)</span>.</p>
+
+<p><br><br></p>
+
+<p>(b) Suppose <span  class="math">\(B \subset A\)</span> and <span  class="math">\(B \subset A \not\Longrightarrow B_{i}
+\subset A_{i} \ \forall i\)</span>. That would allow for the existence of some
+<span  class="math">\(\omega\)</span>-tuple  <span  class="math">\(\omega\)</span> such that <span  class="math">\(\omega_i \in B_1 \cup B_2 \cup \cdots\)</span> and
+<span  class="math">\(\omega_{i} \not\in A_1 \cup A_2 \cup \cdots\)</span>. This is a clear contradiction, as
+such a tuple would be an element of <span  class="math">\(B\)</span> and not an element of <span  class="math">\(A\)</span>.</p>
+
+<p><br><br></p>
+
+<p>(c) Suppose <span  class="math">\(A_{k} = \varnothing\)</span> for some <span  class="math">\(k \in \mathbb{Z}_{+}\)</span>. Then, since <span  class="math">\(A\)</span> is
+defined as the set of all <span  class="math">\(\omega\)</span>-tuples such that <span  class="math">\(\omega_{i}
+\in A_{i}\)</span>, and since there is no element <span  class="math">\(\omega_{k}\)</span> such
+that <span  class="math">\(\omega_{k} \in A_{k}\)</span>, there can be no such tuple. Thus,
+Every <span  class="math">\(A_{i}\)</span> must be nonempty. The converse is also true. If
+each <span  class="math">\(A_{i}\)</span> is nonempty, then there are elements <span  class="math">\(\omega_{i} \in
+A_{i}\)</span> for each <span  class="math">\(i\)</span>, and so the  <span  class="math">\(\omega\)</span>-tuple <span  class="math">\(\omega\)</span> can
+exist.</p>
+
+<p><br><br></p>
+
+<p>(d) The fourth part of the problem is asking us to describe the
+relationship between <span  class="math">\(A \cup B\)</span> and  <span  class="math">\(\prod\limits_{i \in \mathbb{Z}_{+}}
+A_{i} \cup B_{i}\)</span>, and <span  class="math">\(A \cap B\)</span> and <span  class="math">\(\prod\limits_{i \in \mathbb{Z}_{+}}
+A_{i} \cap B_{i}\)</span>. <br><br></p>
+
+<p>In short, <span  class="math">\(A \cup B \subset \prod\limits_{i \in \mathbb{Z}_{+}}
+A_{i} \cup B_{i}\)</span>:
+<span  class="math">\(
+\omega \in A \cup B \implies \omega \in A \textrm{ or } B \implies
+\omega_{i} \in A_{i} \textrm{ or } \omega_{i} \in B_{i} \implies \prod\limits_{i \in \mathbb{Z}_{+}} A_{i} \cup B_{i}
+.\)</span></p>
+
+<p>However, so long as <span  class="math">\(A_1 \cup A_2 \cup \cdots \not\subset B_1 \cup B_2 \cup \cdots\)</span> and  <span  class="math">\(B_1 \cup B_2 \cup \cdots \not\subset A_1 \cup A_2 \cup \cdots\)</span>, there
+can exist some element <span  class="math">\(\omega \in \prod\limits_{i \in \mathbb{Z}_{+}}
+A_{i} \cup B_{i}\)</span> such that some
+<span  class="math">\(\omega_{i} \in A_1 \cup A_2 \cup \cdots \textrm{ and } \omega_{i}
+\not\in B_1 \cup B_2 \cup \cdots\)</span> for some <span  class="math">\(i\)</span>, and  <span  class="math">\(\omega_{k}
+\not\in A_1 \cup A_2 \cup \cdots \textrm{ and } \omega_{i} \in B_1 \cup
+B_2 \cup \cdots\)</span> for some <span  class="math">\(k\)</span>. This element would not be in either
+<span  class="math">\(B\)</span> or  <span  class="math">\(A\)</span>, proving the claim.</p>
+
+<p>On the other hand, <span  class="math">\(\prod\limits_{i \in \mathbb{Z}_{+}}
+A_{i} \cap B_{i} = A \cap B\)</span>:
+<span  class="math">\(
+\omega \in A \cap B \iff \omega \in A \textrm{ and } \omega \in B \iff
+\omega_i \in A_i \textrm{ and } \omega_{i} \in B_{i} \ \forall i \iff
+\omega \in \prod\limits_{i \in \mathbb{Z}_{+}} A_{i} \cap B_{i}
+\)</span></p>
+
+
+        </main></body>
+</html>

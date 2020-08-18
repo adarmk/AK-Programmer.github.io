@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="In single-variable calculus, we can integrate functions of the form
+\[g&#39;(x)f(g(x))\]
+by &#39;rephrasing&#39; the entire integral as an integral of \(g(x)\) instead of an integral of \(x\). This is known as substitution. For example, consider the following integral:
+\[\int x e^{x^2} dx\]
+Integrating this function as it currently is is painfully annoying, and so Leibniz, one of the fathers of calculus, came up with a way to simplify this integral. The first step in doing so is to notice that ">
+
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+    
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+    
+    <title>Adar Kahiri | Change of Variables and the Jacobian</title>
+</head><body><h1 style="margin-bottom: 10px;">Adar Kahiri</h1>
+    
+    <nav>
+        
+            <a class="nav-item" href="/"><b>About</b></a>
+        
+            <a class="nav-item" href="/blog/"><b>Blog</b></a>
+        
+            <a class="nav-item" href="/solutions/"><b>Solutions</b></a>
+        
+            <a class="nav-item" href="/updates/"><b>Updates</b></a>
+        
+    </nav><main id="content">
+    <h2 class="blog-title">Change of Variables and the Jacobian</h2>
+<p class="date">May 18, 2020</p>
+
+    
+    <p>In single-variable calculus, we can integrate functions of the form</p>
+
+<p><span  class="math">\[g'(x)f(g(x))\]</span></p>
+
+<p>by 'rephrasing' the entire integral as an integral of <span  class="math">\(g(x)\)</span> instead of an integral of <span  class="math">\(x\)</span>. This is known as substitution. For example, consider the following integral:</p>
+
+<p><span  class="math">\[\int x e^{x^2} dx\]</span></p>
+
+<p>Integrating this function as it currently is is painfully annoying, and so Leibniz, one of the fathers of calculus, came up with a way to simplify this integral. The first step
+in doing so is to notice that</p>
+
+<p><span  class="math">\(x\)</span> can be represented as a derivative of <span  class="math">\(x^2\)</span>. More precisely, if we let <span  class="math">\(u=x^2\)</span>, then</p>
+
+<p><span  class="math">\[\frac{du}{dx} = 2 x\]</span></p>
+
+<p><span  class="math">\[du = 2 xdx\]</span></p>
+
+<p>Notice how this is very similar to the <span  class="math">\(xdx\)</span> we had in our original integrand, except it has a coefficient of <span  class="math">\(2\)</span>. It follows, then,
+that in order for <span  class="math">\(du\)</span> to equal <span  class="math">\(xdx\)</span>, we must divide it by two,</p>
+
+<p><span  class="math">\[xdx = \frac{1}{2} du\]</span></p>
+
+<p>We can now substitute the variables in our original integral with the new ones,</p>
+
+<p><span  class="math">\[\int x e^{x^2} dx = \frac{1}{2} \int e^u du\]</span></p>
+
+<p>making the integral trivially easy to solve:</p>
+
+<p><span  class="math">\[ \frac{1}{2} \int e^u du = \frac{e^u}{2} + C = \frac{e^{x^2}}{2} + C\]</span></p>
+
+<p>Now, if we want to use an analogous process for functions of several variables, how would we do that? <br><br></p>
+
+<h3 id="change-of-variables">Change of Variables</h3>
+
+<p>Consider the double integral</p>
+
+<p><span  class="math">\[\iint_D 3x\sin(6x+7y) - y \sin(6x+7y) dxdy\]</span></p>
+
+<p>While this integral isn't impossible to solve, we can greatly simplify the process by employing a change of variables. First, we define the transformation</p>
+
+<p><span  class="math">\[T: D \rightarrow D^*\]</span></p>
+
+<p>such that</p>
+
+<p><span  class="math">\[T(x, y) = (u, v)\]</span></p>
+
+<p>where <span  class="math">\(u=3x-y\)</span> and <span  class="math">\(v=6x+7y\)</span>. This transformation transforms the domain <span  class="math">\(D\)</span> in <span  class="math">\(xy\)</span> space to a domain <span  class="math">\(D^*\)</span> in <span  class="math">\(uv\)</span> space.
+If <span  class="math">\(D\)</span> was the unit square <span  class="math">\([0, 1]\times[0, 1]\)</span>, for example, the transformation <span  class="math">\(T\)</span> would &quot;stretch&quot; or &quot;squeeze&quot; the unit square into a parallelogram with a different area.
+Keep this notion in mind, as it will be important in the next step (later in the post I give examples of other transformations).</p>
+
+<p>Now that we have our substitutions for <span  class="math">\(x\)</span> and <span  class="math">\(y\)</span>, we can just replace them with our new variables and integrate over the new domain <span  class="math">\(D^*\)</span>...</p>
+
+<p><span  class="math">\[\iint_D 3x\sin(6x+7y) - y \sin(6x+7y) dxdy \stackrel{?}{=} \iint_{D^*} u \sin v dudv\]</span></p>
+
+<p>... right?</p>
+
+<p>Well, not exactly. The problem is that the infinitesimal area <span  class="math">\(dudv\)</span> is different than the infinitesimal area <span  class="math">\(dxdy\)</span> precisely because the area of the domain as a whole changes
+after being transformed. In order to fix this, wouldn't it really cool if we had a tool for determining by how much the infinitesimal area <span  class="math">\(dxdy\)</span> is scaled when transformed?
+That's where the Jacobian comes in.</p>
+
+<h3 id="jacobian-matrices">Jacobian Matrices</h3>
+
+<p>The Jacobian matrix of a transformation, or, more precisely, its determinant, tells us exactly by how much the transformation scales the infinitesimal area. The Jacobian matrix of the transformation <span  class="math">\(T\)</span> (as defined above) looks like this:</p>
+
+<p><span  class="math">\[\left| \frac{\partial (u, v)}{\partial (x, y)}\right| = \left| \begin{matrix} \frac{\partial u}{\partial x} & \frac{\partial u}{\partial y} \\ \frac{\partial v}{\partial x} & \frac{\partial v}{\partial y} \end{matrix} \right|\]</span></p>
+
+<p>Let's think about why the determinant of such a matrix might give us the factor by which the area is scaled.</p>
+
+<p>In the same way that a smooth, continuous function looks more and more like a straight line the more you 'zoom in' on a point,
+a smooth, continuous transformation, looks more and more like a linear transformation the more you zoom in. Below is a perfect example:
+a non-linear transformation that warps space, but it's not difficult to imagine that as you 'zoom in', which really just means
+paying attention only to points around some given point, one could locally approximate this transformation with a linear
+one.</p>
+
+<p><figure><img src="/images/nonlinear-transformation.jpg" alt="non linear transformation"></figure></p>
+
+<p>Now, we can take advantage of this fact by considering the infinitesimal area dxdy at some point <span  class="math">\((x_0, y_0)\)</span>:</p>
+
+<p><figure><img src="/images/dxdy.png" alt="dxdy"></figure></p>
+
+<p>If we think of the two columns in the Jacobian matrix as transformations of the basis vectors,</p>
+
+<p><span  class="math">\[T_x = \left[ \begin{matrix} \frac{\partial u}{\partial x} \\ \frac{\partial v}{\partial x}\end{matrix}\right], \ \ \ \ T_y = \left[ \begin{matrix} \frac{\partial u}{\partial y} \\ \frac{\partial v}{\partial y}\end{matrix}\right]\]</span></p>
+
+<p>then <span  class="math">\(T_x\)</span> tells us how much <span  class="math">\(\partial x\)</span> is scaled and <span  class="math">\(T_y\)</span> tells us how much <span  class="math">\(\partial y\)</span> is scaled.</p>
+
+<p><figure><img src="/images/local-transformation.png" alt="local transformation"></figure></p>
+
+<p>As the diagram shows, <span  class="math">\(\partial u/\partial x\)</span> tells us how much an infinitesimal step in the <span  class="math">\(x\)</span> direction
+is scaled in the <span  class="math">\(u\)</span> direction, <span  class="math">\(\partial v / \partial x\)</span> tells us how much a step in the <span  class="math">\(x\)</span> direction
+is scaled in the <span  class="math">\(v\)</span> direction, and so on.</p>
+
+<p>Taking the determinant of these two vectors (which together form the Jacobian matrix) essentially gives us
+the ratio of area of parallelogram these two new vectors form to the area of the paralleogram the vectors
+in <span  class="math">\(xy\)</span> space form, which tells us exactly how much it's scaled.</p>
+
+<p>Multiplying this by <span  class="math">\(dxdy\)</span> in the integrand gives us the 'correctly sized' areas which we integrate. And so,
+the 'scaled' integral actually looks like this,</p>
+
+<p><span  class="math">\(\iint_D 3x\sin(6x+7y) - y \sin(6x+7y) dxdy = \iint_{D^*} u \sin v \left|\frac{\partial (u, v)}{\partial (x, y)}\right| dudv\)</span>
+<span  class="math">\(= \iint_{D^*} u \sin v \left| \begin{matrix} 
+\frac{\partial u}{\partial x} & \frac{\partial u}{\partial y} \\ 
+\frac{\partial v}{\partial x} & \frac{\partial v}{\partial y}
+\end{matrix} \right| dudv\)</span></p>
+
+<p><span  class="math">\(= \iint_{D^*} u \sin v \left| \begin{matrix} 
+3 & -1 \\ 6 & 7 \end{matrix} \right| dudv\)</span>
+<span  class="math">\(= 27 \iint_{D^*} u \sin v dudv\)</span></p>
+
+<h3 id="applications">Applications</h3>
+
+<p>The most common application of the change of variables method is most likely converting between different coordinate
+systems. If we want to evaluate the integral</p>
+
+<p><span  class="math">\[\iint_D f(x, y)dxdy\]</span></p>
+
+<p>in polar coordinates, first we define the transformation,
+<span  class="math">\(x=r\cos\theta, \ \ \ \ y= r\sin\theta\)</span></p>
+
+<p>then we set up and evaluate the Jacobian</p>
+
+<p><span  class="math">\[\left| \frac{\partial (x, y)}{\partial (r, \theta)}\right| = \left| \begin{matrix} \cos\theta & -sin\theta \\ \sin\theta & r\cos\theta \end{matrix} \right| = rcos^2\theta + rsin^2\theta = r\]</span></p>
+
+<p>And finally, we can complete the change of variables:</p>
+
+<p><span  class="math">\[\iint_D f(x, y)dxdy = \iint_{D^*} f(r\cos\theta, r\sin\theta) \left| \frac{\partial (x, y)}{\partial (r, \theta)}\right|  dr d\theta = \iint_{D^*} f(r\cos\theta, r\sin\theta) r dr d\theta\]</span></p>
+
+<p>And that's how you can use the Jacobian and the change of variables method to greatly simplify solving all sorts of integrals.
+I hope you found this helpful!</p>
+
+
+        </main></body>
+</html>

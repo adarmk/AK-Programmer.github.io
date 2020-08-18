@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algebraic Topology by Hatcher on Adar Kahiri</title>
+    <link>http://adarkahiri.com/solutions/hatcher-at/</link>
+    <description>Recent content in Algebraic Topology by Hatcher on Adar Kahiri</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 05 Aug 2020 15:22:05 -0400</lastBuildDate>
+    
+	<atom:link href="http://adarkahiri.com/solutions/hatcher-at/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Problems</title>
+      <link>http://adarkahiri.com/solutions/hatcher-at/0/</link>
+      <pubDate>Wed, 05 Aug 2020 15:27:34 -0400</pubDate>
+      
+      <guid>http://adarkahiri.com/solutions/hatcher-at/0/</guid>
+      <description>Problem 10 Show that a space \(X\) is contractible if and only if every map \(f: X \rightarrow Y\), for arbitrary \(Y\), is nullhomotopic. Similarly, show \(X\) is contractible if and only if every map \(f: Y \rightarrow X\) is nullhomotopic. I will assume that by &#39;every map&#39; Hatcher means &#39;every continuous map&#39;. If \(X\) is contractible, then its identity map \(\mathbb{I}: X \rightarrow X\) is nullhomotopic. Let \(h: X \times I \rightarrow X\) be a homotopy between \(\mathbb{I}\) and a constant map (that&#39;s what it means for a function to be nullhomotopic).</description>
+    </item>
+    
+  </channel>
+</rss>

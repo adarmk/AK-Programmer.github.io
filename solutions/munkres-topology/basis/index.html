@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Problem 4:
+ (a) If \(\{\mathscr{T}_{\alpha}\}\) is a family of topologies on \(X\), show that \(\bigcap \mathscr{T}_{\alpha}\) is a topology on \(X\). Is the same true for \(\bigcup \mathscr{T}_{\alpha}\)?
+ (b) Let \(\{\mathscr{T}_{\alpha}\}\) be a family of topologies on \(X\). Show that there is a unique smallest topology on \(X\) containing all collections \(\mathscr{T}_{\alpha}\), and a unique largest topology contained in all \(\mathscr{T}_{\alpha}\).
+  
+(a) All we must do is show that the intersection of the topologies has the properties of a topology: ">
+
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+    
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+    
+    <title>Adar Kahiri | Basis for a Topology</title>
+</head><body><h1 style="margin-bottom: 10px;">Adar Kahiri</h1>
+    
+    <nav>
+        
+            <a class="nav-item" href="/"><b>About</b></a>
+        
+            <a class="nav-item" href="/blog/"><b>Blog</b></a>
+        
+            <a class="nav-item" href="/solutions/"><b>Solutions</b></a>
+        
+            <a class="nav-item" href="/updates/"><b>Updates</b></a>
+        
+    </nav><main id="content">
+    
+    <h2 class="blog-title">Basis for a Topology</h2>
+<p class="date">July 2020</p>
+
+    <p><b>Problem 4:</b></p>
+
+<ul>
+<li><p>(a) If <span  class="math">\(\{\mathscr{T}_{\alpha}\}\)</span> is a family of topologies on <span  class="math">\(X\)</span>, show that <span  class="math">\(\bigcap \mathscr{T}_{\alpha}\)</span> is a topology on <span  class="math">\(X\)</span>. Is the same
+true for <span  class="math">\(\bigcup \mathscr{T}_{\alpha}\)</span>?</p></li>
+
+<li><p>(b) Let <span  class="math">\(\{\mathscr{T}_{\alpha}\}\)</span> be a family of topologies on <span  class="math">\(X\)</span>. Show that there is a unique smallest topology on <span  class="math">\(X\)</span> containing all collections
+<span  class="math">\(\mathscr{T}_{\alpha}\)</span>, and a unique largest topology contained in all <span  class="math">\(\mathscr{T}_{\alpha}\)</span>.</p></li>
+</ul>
+
+<p><br></p>
+
+<p>(a) All we must do is show that the intersection of the topologies
+has the properties of a topology:</p>
+
+<ol>
+<li><p><span  class="math">\(\varnothing\)</span> and <span  class="math">\(X\)</span> are clearly in <span  class="math">\(\bigcap
+\mathscr{T}_{\alpha}\)</span> since they are both in
+every <span  class="math">\(\mathscr{T}_{\alpha}\)</span> by definition.</p></li>
+
+<li><p>Let <span  class="math">\(x, y \in \bigcap
+\mathscr{T}_{\alpha}\)</span>. Since both
+<span  class="math">\(x\)</span> and <span  class="math">\(y\)</span> are contained in every
+<span  class="math">\(\mathscr{T}_{\alpha}\)</span>, their union is
+also contained in every
+<span  class="math">\(\mathscr{T}_{\alpha}\)</span> by definition.</p></li>
+
+<li><p>Since both <span  class="math">\(x\)</span>
+and <span  class="math">\(y\)</span> are contained in every
+<span  class="math">\(\mathscr{T}_{\alpha}\)</span>, their
+intersection is also contained in every
+<span  class="math">\(\mathscr{T}_{\alpha}\)</span> by definition.</p></li>
+</ol>
+
+<p>The same is not true for <span  class="math">\(\bigcup \mathscr{T}_{\alpha}\)</span>
+unless there is one <span  class="math">\(\mathscr{T}_{\alpha}\)</span> that
+contains all the other topologies. For example, suppose
+you have <span  class="math">\(x \in \mathscr{T}_{\alpha}\)</span> and <span  class="math">\(y \in
+\mathscr{T}_{\beta}\)</span>. Unless <span  class="math">\(y \in
+\mathscr{T}_{\alpha}\)</span> or <span  class="math">\(x \in \mathscr{T}_{\beta}\)</span>,
+<span  class="math">\(x \cup y\)</span> isn't necessarily in <span  class="math">\(\mathscr{T}_{\alpha} \cup
+\mathscr{T}_{\beta}\)</span>,
+and so the second condition for a topology is not satisfied.</p>
+
+<p><br></p>
+
+<p>(b) The unique largest topology contained in all
+<span  class="math">\(\mathscr{T}_{\alpha}\)</span> would be
+<span  class="math">\(\bigcap \mathscr{T}_{\alpha}\)</span>, since it is by
+definition the largest set which is contained in every
+<span  class="math">\(\mathscr{T}_{\alpha}\)</span>, and it is itself a topology,
+as proved above.<br><br></p>
+
+<p>The unique smallest topology containing all
+<span  class="math">\(\mathscr{T}_{\alpha}\)</span>, which we shall call <span  class="math">\(T\)</span>, is the<br>
+topology generated
+by the subbasis <span  class="math">\(\bigcup \mathscr{T}_{\alpha}\)</span>. <br><br></p>
+
+<p>By definition, <span  class="math">\(T\)</span> would contain every <span  class="math">\(x \in
+\mathscr{T}_{\alpha} \forall \alpha\)</span>, every possible finite
+intersection of <span  class="math">\(\bigcup \mathscr{T}_{\alpha}\)</span>, and
+every possible union of the finite intersections. <br><br></p>
+
+<p>Now we are left to prove that this is in fact the smallest
+topology containing every <span  class="math">\(\mathscr{T}_{\alpha}\)</span>. <br><br></p>
+
+<p>Suppose <span  class="math">\( T'\)</span> is a topology that is smaller than <span  class="math">\(T\)</span>
+and contains all of <span  class="math">\(\{\mathscr{T}_{\alpha}\}\)</span>. Then
+there must be elements of <span  class="math">\(T\)</span> which are not in <span  class="math">\(T'\)</span>.
+If <span  class="math">\(T'\)</span> does not contain any <span  class="math">\(x \in
+\mathscr{T}_{\alpha}\)</span> for any <span  class="math">\(\alpha\)</span>, then it does
+not contain all of <span  class="math">\(\{\mathscr{T}_{\alpha}\}\)</span>. If it
+does not contain some finite intersection of the elements
+of  <span  class="math">\(\bigcup \mathscr{T}_{\alpha}\)</span>, then it is not a
+topology by definition. If it does not contain some
+union of the finite intersections of  <span  class="math">\(\bigcup
+\mathscr{T}_{\alpha}\)</span>, then it is not a topology by
+definition. Thus, <span  class="math">\(T\)</span> must be the smallest topology
+which contains all of <span  class="math">\(\{\mathscr{T}_{\alpha}\}\)</span>.</p>
+
+<p><br><br></p>
+
+
+        </main></body>
+</html>

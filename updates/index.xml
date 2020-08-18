@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Updates on Adar Kahiri</title>
+    <link>http://adarkahiri.com/updates/</link>
+    <description>Recent content in Updates on Adar Kahiri</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 18 Aug 2020 16:12:09 -0400</lastBuildDate>
+    
+	<atom:link href="http://adarkahiri.com/updates/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>July 2020</title>
+      <link>http://adarkahiri.com/updates/july-2020/</link>
+      <pubDate>Tue, 18 Aug 2020 18:23:35 -0400</pubDate>
+      
+      <guid>http://adarkahiri.com/updates/july-2020/</guid>
+      <description>July 2020   Math stuff. I started learning topology. I&amp;rsquo;ve been reading Munkres&amp;rsquo;s book on the subject to learn about the fundamentals of point-set topology. I also started reading Hatcher&amp;rsquo;s book on algebraic topology as well as Pinter&amp;rsquo;s book on abstract algebra. My goal is to have a solid foundation in algebraic topology and algebra in a few months. I&amp;rsquo;ve been posting some solutions to problems I&amp;rsquo;ve done in Munkres&amp;rsquo;s book here.</description>
+    </item>
+    
+  </channel>
+</rss>
