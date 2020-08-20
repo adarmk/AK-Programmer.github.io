@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction to Quantum Mechanics by Griffiths on Adar Kahiri</title>
+    <link>http://adarkahiri.com/solutions/griffithsqm/</link>
+    <description>Recent content in Introduction to Quantum Mechanics by Griffiths on Adar Kahiri</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 May 2020 01:08:40 -0400</lastBuildDate>
+    
+	<atom:link href="http://adarkahiri.com/solutions/griffithsqm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Problem 2.1</title>
+      <link>http://adarkahiri.com/solutions/griffithsqm/2.1/</link>
+      <pubDate>Tue, 02 Jun 2020 01:20:40 -0400</pubDate>
+      
+      <guid>http://adarkahiri.com/solutions/griffithsqm/2.1/</guid>
+      <description>Problem: Prove the following three theorems (a) For normalizable solutions, the separation constant \(E\) must be real. (b) The time-independent wave-function \(\psi(x)\) can always be taken to be real (unlike \(\Psi (x, t)\)) (c) If \(V(x)\) is an even function (that is, \(V(x)=V(-x)\)), then \(\psi(x)\) can always be taken to be either even or odd.
+Solution: 
+(a) We have the wave-function
+\[\Psi(x, t) = \psi(x)e^{-iEt/\hbar}\]
+Now, if we assume that \(E\) is a complex number that takes on the form \(E_0 + \Gamma i\), we have</description>
+    </item>
+    
+    <item>
+      <title>Problem 1.17</title>
+      <link>http://adarkahiri.com/solutions/griffithsqm/1.17/</link>
+      <pubDate>Wed, 20 May 2020 01:20:29 -0400</pubDate>
+      
+      <guid>http://adarkahiri.com/solutions/griffithsqm/1.17/</guid>
+      <description>Problem: Suppose you wanted to describe an unstable particle, that spontaneously disintegrates with a &#39;lifetime&#39; \(\tau\). In that case the total probability of finding the particle somewhere should not be constant, but should decrease at an exponential rate:
+\[P(t) = \int_{-\infty}^{\infty} |\Psi(x, t)|^2 dx = e^{-t/\tau}.\]
+If
+\[V = V_0 - i\Gamma,\]
+where \(V_0\) is the true potential energy and \(\Gamma\) is a positive real constant.
+ (a) Show that, in place of \(dP/dt = 0\), as with a &amp;quot;stable particle&amp;quot;, we now get \(\frac{dP}{dt} = - \frac{2\Gamma}{\hbar}P\) (b) Solve for \(P(t)\), and find the lifetime of the particle in terms of \(\Gamma\)</description>
+    </item>
+    
+    <item>
+      <title>Problem 1.7</title>
+      <link>http://adarkahiri.com/solutions/griffithsqm/1.7/</link>
+      <pubDate>Wed, 20 May 2020 01:20:13 -0400</pubDate>
+      
+      <guid>http://adarkahiri.com/solutions/griffithsqm/1.7/</guid>
+      <description>Problem: Show that \(\frac{d\langle p \rangle}{dt} = \left\langle - \frac{\partial V}{\partial x}\right\rangle .\)
+Solution:  In the book, Griffiths derives momentum to be
+\[\langle p \rangle = m \frac{d\langle x \rangle}{dt} = -i\hbar \int_{-\infty}^{\infty} \left(\Psi^* \frac{\partial \Psi}{\partial x}\right)dx\]
+And so we have
+\[\frac{d \langle p \rangle}{dt} = m \frac{d^2\langle x \rangle}{dt^2} = -i\hbar \int_{-\infty}^{\infty} \frac{\partial}{\partial t}\left(\Psi^* \frac{\partial \Psi}{\partial x}\right)dx\]
+\[= -i\hbar \int_{-\infty}^{\infty} \left( \frac{\partial \Psi^*}{\partial t} \frac{\partial \Psi}{\partial x} + \Psi^* \frac{\partial}{\partial t} \left( \frac{\partial \Psi}{\partial x}\right)\right)dx\]</description>
+    </item>
+    
+    <item>
+      <title>Problem 1.5</title>
+      <link>http://adarkahiri.com/solutions/griffithsqm/1.5/</link>
+      <pubDate>Thu, 14 May 2020 01:12:26 -0400</pubDate>
+      
+      <guid>http://adarkahiri.com/solutions/griffithsqm/1.5/</guid>
+      <description>Problem Consider the wave function
+\[\Psi (x,t)=Ae^{-\lambda |x|}e^{-i\omega t},\]
+where \(A\), \(\lambda\), and \(\omega\) are positive real constants. Normalize \(\Psi\), determine the expectation values of \(x\) and \(x^2\), and find the standard deviation (\(\sigma\)) of \(x\). What is the probability the particle would be found outside the range \(-\sigma \leq x \leq \sigma\).
+Solution:  First, to normalize \(\Psi\) means to find \(A\) such that
+\[\int_{-\infty}^{\infty} |\Psi (x, t)|^2 dx = 1,\]</description>
+    </item>
+    
+  </channel>
+</rss>
