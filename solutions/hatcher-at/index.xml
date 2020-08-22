@@ -17,7 +17,7 @@
       <pubDate>Wed, 05 Aug 2020 15:27:34 -0400</pubDate>
       
       <guid>http://adarkahiri.com/solutions/hatcher-at/0/</guid>
-      <description>Problem 10 Show that a space \(X\) is contractible if and only if every map \(f: X \rightarrow Y\), for arbitrary \(Y\), is nullhomotopic. Similarly, show \(X\) is contractible if and only if every map \(f: Y \rightarrow X\) is nullhomotopic. f \(X\) is contractible, then its identity map \(\mathbb{I}: X \rightarrow X\) is nullhomotopic. Let \(h: X \times I \rightarrow X\) be a homotopy between \(\mathbb{I}\) and a constant map (This map exists since the identity is nullhomotopic).</description>
+      <description>Problem 10 Show that a space \(X\) is contractible if and only if every map \(f: X \rightarrow Y\), for arbitrary \(Y\), is nullhomotopic. Similarly, show \(X\) is contractible if and only if every map \(f: Y \rightarrow X\) is nullhomotopic. Iåf \(X\) is contractible, then its identity map \(\mathbb{I}: X \rightarrow X\) is nullhomotopic. Let \(h: X \times I \rightarrow X\) be a homotopy between \(\mathbb{I}\) and a constant map (This map exists since the identity is nullhomotopic).</description>
     </item>
     
   </channel>
