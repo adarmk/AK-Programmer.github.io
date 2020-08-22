@@ -2,10 +2,10 @@
 <html lang="en-us"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Problem 10 Show that a space \(X\) is contractible if and only if every map \(f: X \rightarrow Y\), for arbitrary \(Y\), is nullhomotopic. Similarly, show \(X\) is contractible if and only if every map \(f: Y \rightarrow X\) is nullhomotopic. I will assume that by &#39;every map&#39; Hatcher means &#39;every continuous map&#39;. If \(X\) is contractible, then its identity map \(\mathbb{I}: X \rightarrow X\) is nullhomotopic. Let \(h: X \times I \rightarrow X\) be a homotopy between \(\mathbb{I}\) and a constant map (that&#39;s what it means for a function to be nullhomotopic). ">
+    <meta name="description" content="Problem 10 Show that a space \(X\) is contractible if and only if every map \(f: X \rightarrow Y\), for arbitrary \(Y\), is nullhomotopic. Similarly, show \(X\) is contractible if and only if every map \(f: Y \rightarrow X\) is nullhomotopic. f \(X\) is contractible, then its identity map \(\mathbb{I}: X \rightarrow X\) is nullhomotopic. Let \(h: X \times I \rightarrow X\) be a homotopy between \(\mathbb{I}\) and a constant map (This map exists since the identity is nullhomotopic). ">
 
     <link rel="stylesheet" type="text/css" href="/css/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 
     
 
@@ -33,14 +33,13 @@
 
     <h4 id="problem-10">Problem 10</h4>
 
-<p>Show that a space <span  class="math">\(X\)</span> is contractible if and only if every map
-<span  class="math">\(f: X \rightarrow Y\)</span>, for arbitrary <span  class="math">\(Y\)</span>, is nullhomotopic. Similarly, show <span  class="math">\(X\)</span> is contractible if and only if
-every map <span  class="math">\(f: Y \rightarrow X\)</span> is nullhomotopic.
+<p><i>Show that a space <span  class="math">\(X\)</span> is contractible if and only if every map <span  class="math">\(f: X \rightarrow Y\)</span>, for arbitrary <span  class="math">\(Y\)</span>, is nullhomotopic. Similarly, show <span  class="math">\(X\)</span> is contractible if and only if
+every map <span  class="math">\(f: Y \rightarrow X\)</span> is nullhomotopic.</i>
 <br><br></p>
 
-<p>I will assume that by 'every map' Hatcher means 'every continuous map'. If <span  class="math">\(X\)</span> is contractible, then its identity map
+<p>f <span  class="math">\(X\)</span> is contractible, then its identity map
 <span  class="math">\(\mathbb{I}: X \rightarrow X\)</span> is nullhomotopic. Let <span  class="math">\(h: X \times I \rightarrow X\)</span> be a homotopy between <span  class="math">\(\mathbb{I}\)</span> and a constant map
-(that's what it means for a function to be nullhomotopic). Then the composite <span  class="math">\(fh: X \times I \rightarrow Y\)</span> is a homotopy from <span  class="math">\(f\)</span> to a constant map. Conversely,
+(This map exists since the identity is nullhomotopic). Then the composite <span  class="math">\(fh: X \times I \rightarrow Y\)</span> is a homotopy from <span  class="math">\(f\)</span> to a constant map. Conversely,
 suppose <i>every</i> map <span  class="math">\(f: X \rightarrow Y\)</span> for arbitrary <span  class="math">\(Y\)</span> is nullhomotopic. Then the identity map falls under this category (we can just set <span  class="math">\(Y=X\)</span>), and <span  class="math">\(X\)</span> is
 therefore contractible. <br><br></p>
 
@@ -49,7 +48,34 @@ therefore contractible. <br><br></p>
 <span  class="math">\(h(f(Y), 0) = f(Y)\)</span> and <span  class="math">\(h(f(Y), 1) = c_0\)</span> for some point <span  class="math">\(c_0 \in X\)</span>. Conversely, if every map <span  class="math">\(f: Y \rightarrow X\)</span> is nullhomotopic, then, setting <span  class="math">\(Y=X\)</span>, the identity map
 must also be homotopic. <br><br></p>
 
-<p>I suspect I didn't use the proper notation here for composing functions where the domains of some functions are products, but the logic still holds (I hope!).</p>
+<p>I suspect I didn't use the proper notation here for composing functions where the domains of some functions are products, but the logic still holds (I hope!).
+<span  class="math">\(\tag*{$\blacksquare$}\)</span>
+<br><br></p>
+
+<h3 id="problem-11">Problem 11</h3>
+
+<p><i>Show that <span  class="math">\(f: X \to Y\)</span> is a homotopy equivalence if there exist maps <span  class="math">\(g, h: Y \to X\)</span> such that <span  class="math">\(fg \simeq \mathbb{I}\)</span>  and <span  class="math">\(hf \simeq \mathbb{I}\)</span>. More generally, show that <span  class="math">\(f\)</span> is a homotopy equivalence if <span  class="math">\(fg\)</span> and <span  class="math">\(hf\)</span> are homotopy equivalences.</i>
+<br><br></p>
+
+<p><span  class="math">\(f\)</span> is a homotopy equivalence if there exists some map <span  class="math">\(j: Y \to X\)</span> such that <span  class="math">\(fj = \mathbb{I}_Y\)</span> and <span  class="math">\(jf = \mathbb{I}_X\)</span>. We can construct <span  class="math">\(j\)</span> by composing the given maps: <span  class="math">\(j = hfg: Y \to X\)</span>. Then we have</p>
+
+<p><span  class="math">\[f(hfg) = f(hf)g \simeq f \mathbb{I}_X g = fg \simeq \mathbb{I}_Y\]</span></p>
+
+<p>and</p>
+
+<p><span  class="math">\[(hfg)f = h(fg)f \simeq h \mathbb{I} f \simeq hf \simeq \mathbb{I}_X\]</span></p>
+
+<p>Now the problem asks us to prove the same thing by assuming instead that there exist maps <span  class="math">\(g, h: Y \to X\)</span> such that <span  class="math">\(fg\)</span> and <span  class="math">\(hf\)</span> are homotopy equivalences. If <span  class="math">\(fg\)</span> is a homotopy equivalence, then there exists a map <span  class="math">\(k: Y \to Y\)</span> such that <span  class="math">\(kfg \simeq \mathbb{I}_Y\)</span> and <span  class="math">\(fgk \simeq \mathbb {I}_Y\)</span>. A similar map <span  class="math">\(d: X \to X\)</span> must exist for <span  class="math">\(hf\)</span>.</p>
+
+<p><span  class="math">\(f\)</span> is a homotopy equivalence if there exists some map <span  class="math">\(j: Y \to X\)</span> such that <span  class="math">\(fj \simeq \mathbb{I}_Y\)</span> and <span  class="math">\(jf \simeq \mathbb{I}_X\)</span>. We can form <span  class="math">\(j\)</span> by  composing  the above functions like so:  <span  class="math">\(j = dhfgk: Y \to X\)</span>. Then we have</p>
+
+<p><span  class="math">\[ f (dhfgk) = f(dhf)gk \simeq f \mathbb{I}_X gk =  fgk \simeq \mathbb{I}_Y \]</span></p>
+
+<p>and</p>
+
+<p><span  class="math">\[ (dhfgk) f = dh(fgk)f \simeq dh \mathbb{I}_Y f = dhf \simeq \mathbb{I}_X \]</span></p>
+
+<p><span  class="math">\[\tag*{$\blacksquare$}\]</span></p>
 
 
         </main></body>

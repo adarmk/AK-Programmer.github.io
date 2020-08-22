@@ -26,7 +26,7 @@
       <pubDate>Wed, 05 Aug 2020 15:27:34 -0400</pubDate>
       
       <guid>http://adarkahiri.com/solutions/hatcher-at/0/</guid>
-      <description>Problem 10 Show that a space \(X\) is contractible if and only if every map \(f: X \rightarrow Y\), for arbitrary \(Y\), is nullhomotopic. Similarly, show \(X\) is contractible if and only if every map \(f: Y \rightarrow X\) is nullhomotopic. I will assume that by &#39;every map&#39; Hatcher means &#39;every continuous map&#39;. If \(X\) is contractible, then its identity map \(\mathbb{I}: X \rightarrow X\) is nullhomotopic. Let \(h: X \times I \rightarrow X\) be a homotopy between \(\mathbb{I}\) and a constant map (that&#39;s what it means for a function to be nullhomotopic).</description>
+      <description>Problem 10 Show that a space \(X\) is contractible if and only if every map \(f: X \rightarrow Y\), for arbitrary \(Y\), is nullhomotopic. Similarly, show \(X\) is contractible if and only if every map \(f: Y \rightarrow X\) is nullhomotopic. f \(X\) is contractible, then its identity map \(\mathbb{I}: X \rightarrow X\) is nullhomotopic. Let \(h: X \times I \rightarrow X\) be a homotopy between \(\mathbb{I}\) and a constant map (This map exists since the identity is nullhomotopic).</description>
     </item>
     
     <item>
@@ -94,7 +94,7 @@ Since \(A\) is finite and simply ordered, we can define the order-preserving bij
       <pubDate>Thu, 18 Jun 2020 14:35:55 -0400</pubDate>
       
       <guid>http://adarkahiri.com/solutions/munkres-topology/cartesian-product/</guid>
-      <description>Problem 1: Show there is a bijective correspondence of \(A \times B\) with \(B \times A\) Since \((a, b) \in A \times B \iff (b, a) \in B \times A\), we can map any element \((a, b)\) to the element \((b, a)\) and vice versa, and so there is clearly a bijective correspondence between the two sets. 
+      <description>Problem 1: Show there is a bijective correspondence of \(A \times B\) with \(B \times A\) Since \((a, b) \in A \times B \iff (b, a) \in B \times A\), we can map any element \((a, b)\) to the element \((b, a)\) and vice versa, and so there is clearly a bijective correspondence between the two sets. \(\tag*{$\blacksquare$}\)
 
 Problem 3: Let \(A = A_1 \times A_2 \times \cdots\) and \(B = B_1 \times B_2 \times \cdots\)</description>
     </item>

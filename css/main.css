@@ -4,7 +4,7 @@ body {
     margin-left: 27%; 
     margin-right: 27%; 
     margin-bottom: 10%;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto', sans-serif;
     }
 
 h1 {
@@ -12,11 +12,14 @@ h1 {
 }
 
 h2 {
-    font-weight: 300;
+    font-weight: 500;
+    margin-bottom: 20px;
 }
 
 h3 {
     margin-top: 40px;
+    margin-bottom: 10px;
+    font-weight: 500;
 }
 hr {
     border: 0.5px 
@@ -26,6 +29,7 @@ hr {
 
 a {
     color: #529cce;
+    font-family: 'Lora', serif;
 }
 
 a:hover {
@@ -33,14 +37,15 @@ a:hover {
 }
 
 li {
-    color: rgb(34, 34, 34);
-    font-size: 14px;
+    font-size: 16px;
+    font-family: 'Lora', serif;
+
 }
 
 p {
-    font-weight: 300; 
+    font-family: 'Lora', serif;
     color: rgb(34, 34, 34);
-    font-size: 14px;
+    font-size: 16px;
 }
 
 img {
@@ -59,8 +64,9 @@ nav {
 }
 
 .nav-item {
+    font-family: 'Roboto', sans-serif;
     margin-right: 30px;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 .blog-title {

@@ -76,7 +76,7 @@ Since \(A\) is finite and simply ordered, we can define the order-preserving bij
       <pubDate>Thu, 18 Jun 2020 14:35:55 -0400</pubDate>
       
       <guid>http://adarkahiri.com/solutions/munkres-topology/cartesian-product/</guid>
-      <description>Problem 1: Show there is a bijective correspondence of \(A \times B\) with \(B \times A\) Since \((a, b) \in A \times B \iff (b, a) \in B \times A\), we can map any element \((a, b)\) to the element \((b, a)\) and vice versa, and so there is clearly a bijective correspondence between the two sets. 
+      <description>Problem 1: Show there is a bijective correspondence of \(A \times B\) with \(B \times A\) Since \((a, b) \in A \times B \iff (b, a) \in B \times A\), we can map any element \((a, b)\) to the element \((b, a)\) and vice versa, and so there is clearly a bijective correspondence between the two sets. \(\tag*{$\blacksquare$}\)
 
 Problem 3: Let \(A = A_1 \times A_2 \times \cdots\) and \(B = B_1 \times B_2 \times \cdots\)</description>
     </item>
