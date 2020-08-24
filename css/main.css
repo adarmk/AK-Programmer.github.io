@@ -1,8 +1,20 @@
+@media only screen and (min-width: 900px) {
+    html {
+        padding-left: 27%; 
+        padding-right: 27%; 
+    }
+}
+
+@media only screen and (max-width: 899px) {
+    html {
+        padding-left: 2%; 
+        padding-right: 3%; 
+    }
+}
+
 body {  
     background-color: #f7f7f7;
-    min-width: 450px; 
-    margin-left: 27%; 
-    margin-right: 27%; 
+    width: 100%;
     margin-bottom: 10%;
     font-family: 'Roboto', sans-serif;
     }
