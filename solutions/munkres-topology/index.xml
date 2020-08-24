@@ -31,7 +31,6 @@ defines a metric on \(X\). \(X\) can inheret a subspace topology from the box, p
       
       <guid>http://adarkahiri.com/solutions/munkres-topology/continuous-functions/</guid>
       <description>Problem 1: Prove that for functions \(f: \mathbb{R} \rightarrow \mathbb{R}\), the \(\epsilon-\delta\) definition of continuity implies the open set definition. 
-
 The \(\epsilon-\delta\) definition: A map \(f: \mathbb{R} \rightarrow \mathbb{R}\) is continuous if for all \(x\) in the domain,
 \[\forall \epsilon  0, \exists \ \delta  0 \textrm{ such that } |y-x| The open set definition: Let \(X\) and \(Y\) be topological spaces. \(f: X \rightarrow Y\) is continuous if for each open subset \(V\) of \(Y\), \(f^{-1}(V)\) is an open subset of \(X\).</description>
     </item>

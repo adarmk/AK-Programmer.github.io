@@ -3,7 +3,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Problem 1: Prove that for functions \(f: \mathbb{R} \rightarrow \mathbb{R}\), the \(\epsilon-\delta\) definition of continuity implies the open set definition. 
-
 The \(\epsilon-\delta\) definition: A map \(f: \mathbb{R} \rightarrow \mathbb{R}\) is continuous if for all \(x\) in the domain,
 \[\forall \epsilon  0, \exists \ \delta  0 \textrm{ such that } |y-x| The open set definition: Let \(X\) and \(Y\) be topological spaces. \(f: X \rightarrow Y\) is continuous if for each open subset \(V\) of \(Y\), \(f^{-1}(V)\) is an open subset of \(X\). ">
 
@@ -43,8 +42,6 @@ Problem 1: Prove that for functions
 set definition.
 </b></p>
 
-<p><br><br></p>
-
 <p><b>The <span  class="math">\(\epsilon-\delta\)</span> definition:</b> A map <span  class="math">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span> is continuous
 if for all <span  class="math">\(x\)</span> in the domain,</p>
 
@@ -62,9 +59,8 @@ in <span  class="math">\(f^{-1}(V)\)</span>. Since there is such an open set for
 is therefore open. Since any open set in the codomain is going to be the union of
 intervals like <span  class="math">\(V\)</span>, this applies to any open set in the codomain and its inverse.</p>
 
-<p><span  class="math">\[\tag*{$\blacksquare$}\]</span></p>
-
-<p><br><br></p>
+<p><span  class="math">\(\tag*{$\blacksquare$}\)</span>
+<br></p>
 
 <p><b>Problem 11:
 Let <span  class="math">\(F: X \times Y \rightarrow Z\)</span>. <span  class="math">\(F\)</span> is continuous in each variable separately if
@@ -87,7 +83,18 @@ Show that if <span  class="math">\(f\)</span> may be extended to a continuous fu
 uniquely determined by <span  class="math">\(f\)</span>.
 </b></p>
 
-<p>Let's rephrase what this question is asking to make what we must prove a little clearer.</p>
+<p>Suppose there are two distinct functions <span  class="math">\(g_1, g_2: \overline{A} \rightarrow Y\)</span> such that <span  class="math">\(g_i | A = f\)</span>. Since they are distinct, there must exist some <span  class="math">\(x \in \overline{A}\)</span> such that <span  class="math">\(g_1(x) \neq g_2(x)\)</span>. Let <span  class="math">\(U, V\)</span> be disjoint open neighbourhoods in <span  class="math">\(Y\)</span> of <span  class="math">\(g_1(x), g_2(x)\)</span>, respectively. We can define such neighbourhoods since <span  class="math">\(Y\)</span> is Hausdorff.</p>
+
+<p>Let <span  class="math">\(g_1(\overline{A}), \ g_2(\overline{A})\)</span> inherit the subspace topology from <span  class="math">\(Y\)</span>. Then <span  class="math">\(g_1(\overline{A}) \cap U, \
+g_2(\overline{A}) \cap V\)</span> are open in <span  class="math">\(g_1(\overline{A}), \ g_2(\overline{A})\)</span>, respectively. Since <span  class="math">\(g_1, g_2\)</span> are  continuous,</p>
+
+<p><span  class="math">\[S = g_1^{-1}(g_1(\overline{A}) \cap U), \ \ \ T = g_2^{-1}(g_2(\overline{A}) \cap V)\]</span></p>
+
+<p>are both open neighbourhoods of <span  class="math">\(x\)</span> in <span  class="math">\(\overline{A}\)</span> (meaning <span  class="math">\(S \cap T\)</span> isn't empty). Note that because <span  class="math">\(x \in \overline{A}\)</span>, all open neighbourhoods of <span  class="math">\(x\)</span> must contain points of <span  class="math">\(A\)</span>. Since <span  class="math">\( \ g_1 |  A  = g_2 | A = f\)</span>,</p>
+
+<p><span  class="math">\[ g_1 (S \cap A \cap T) = g_2 (S \cap A \cap T)\]</span></p>
+
+<p>But this is a contradiction, since <span  class="math">\(g_1(S) \cap g_2(T) = \varnothing\)</span>. Then there can't exist disjoint neighbourhoods of <span  class="math">\(g_1(x), g_2(x)\)</span>, meaning <span  class="math">\(g_1 = g_2\)</span>, and so <span  class="math">\(g\)</span> is  uniquely determined by <span  class="math">\(f\)</span>.</p>
 
 <p><span  class="math">\[\tag*{$\blacksquare$}\]</span></p>
 
