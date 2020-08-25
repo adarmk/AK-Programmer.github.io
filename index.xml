@@ -12,16 +12,6 @@
     
     
     <item>
-      <title>A Hero&#39;s Journey</title>
-      <link>http://adarkahiri.com/blog/heros-journey/</link>
-      <pubDate>Fri, 21 Aug 2020 23:55:24 -0400</pubDate>
-      
-      <guid>http://adarkahiri.com/blog/heros-journey/</guid>
-      <description>Lately, I&amp;rsquo;ve been thinking about what I want to do with my life, as one does. Thus far, the answer is, &amp;ldquo;I&amp;rsquo;m not entirely sure&amp;rdquo;.
-There are a bunch of things I really enjoy doing, but right now it&amp;rsquo;s hard to definitively say what I&amp;rsquo;d like to dedicate the rest of my life to, if anything. Yet, I still have a general, vaguely defined sense of where I&amp;rsquo;d like to end up.</description>
-    </item>
-    
-    <item>
       <title>July 2020</title>
       <link>http://adarkahiri.com/updates/july-2020/</link>
       <pubDate>Tue, 18 Aug 2020 18:23:35 -0400</pubDate>
@@ -36,7 +26,7 @@ There are a bunch of things I really enjoy doing, but right now it&amp;rsquo;s h
       <pubDate>Wed, 05 Aug 2020 15:27:34 -0400</pubDate>
       
       <guid>http://adarkahiri.com/solutions/hatcher-at/0/</guid>
-      <description>Problem 10 Show that a space \(X\) is contractible if and only if every map \(f: X \rightarrow Y\), for arbitrary \(Y\), is nullhomotopic. Similarly, show \(X\) is contractible if and only if every map \(f: Y \rightarrow X\) is nullhomotopic. Iåf \(X\) is contractible, then its identity map \(\mathbb{I}: X \rightarrow X\) is nullhomotopic. Let \(h: X \times I \rightarrow X\) be a homotopy between \(\mathbb{I}\) and a constant map (This map exists since the identity is nullhomotopic).</description>
+      <description>Problem 10 Show that a space \(X\) is contractible if and only if every map \(f: X \rightarrow Y\), for arbitrary \(Y\), is nullhomotopic. Similarly, show \(X\) is contractible if and only if every map \(f: Y \rightarrow X\) is nullhomotopic. If \(X\) is contractible, then its identity map \(\mathbb{I}: X \rightarrow X\) is nullhomotopic. Let \(h: X \times I \rightarrow X\) be a homotopy between \(\mathbb{I}\) and a constant map (This map exists since the identity is nullhomotopic).</description>
     </item>
     
     <item>
