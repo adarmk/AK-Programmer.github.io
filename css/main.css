@@ -8,7 +8,7 @@
 @media only screen and (max-width: 899px) {
     html {
         padding-left: 2%; 
-        padding-right: 3%; 
+        padding-right: 4%; 
     }
 }
 
@@ -33,6 +33,12 @@ h3 {
     margin-bottom: 10px;
     font-weight: 500;
 }
+
+h4 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
 hr {
     border: 0.5px 
     solid rgb(139, 139, 139);
@@ -58,6 +64,7 @@ p {
     font-family: 'Lora', serif;
     color: rgb(34, 34, 34);
     font-size: 16px;
+    margin-top: 0px;
 }
 
 img {
