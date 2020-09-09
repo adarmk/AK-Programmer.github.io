@@ -2,7 +2,7 @@
 <html lang="en-us"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="About a week ago, I read a rather elegant proof of the fundamental theorem of algebra using the fundamental group of a circle. It&#39;s among the more surprising proofs I&#39;ve read. As someone who knows very little about algebra and topology, I&#39;m accustomed to algebraic structures being used to solve topological problems, but this proof bridged the two worlds in exactly the opposite way.
+    <meta name="description" content="About a week ago, I read a rather elegant proof of the fundamental theorem of algebra involving the fundamental group of a circle. It&#39;s among the more surprising proofs I&#39;ve read. As someone who knows very little about algebra and topology, I&#39;m accustomed to algebraic structures being used to solve topological problems, but this proof bridged the two worlds in exactly the opposite way.
 When I first read the proof, I was a little confused, mainly because I didn&#39;t understand the motivation behind the methods used. ">
 
     <link rel="stylesheet" type="text/css" href="/css/main.css">
@@ -30,9 +30,9 @@ When I first read the proof, I was a little confused, mainly because I didn&#39;
 
 
     
-    <p>About a week ago, I read a rather elegant proof of the fundamental theorem of algebra using the fundamental group of a circle. It's among the more surprising proofs I've read. As someone who knows very little about algebra and topology, I'm accustomed to algebraic structures being used to solve topological problems, but this proof bridged the two worlds in exactly the opposite way.</p>
+    <p>About a week ago, I read a rather elegant proof of the fundamental theorem of algebra involving the fundamental group of a circle. It's among the more surprising proofs I've read. As someone who knows very little about algebra and topology, I'm accustomed to algebraic structures being used to solve topological problems, but this proof bridged the two worlds in exactly the opposite way.</p>
 
-<p>When I first read the proof, I was a little confused, mainly because I didn't understand the motivation behind the methods used. I could follow the logical chain, but I couldn't quite see the forest for trees. So in this post, I'll be taking the proof (taken from <a href="https://pi.math.cornell.edu/~hatcher/AT/AT.pdf">Hatcher's</a> book) and explaining it in greater detail–primarily as a test of my understanding and communication abililties, but also in the hopes that someone else might find this helpful.</p>
+<p>When I first read the proof, I was a little confused, mainly because I didn't understand the motivation behind the methods used. I could follow the logical chain, but I couldn't quite see the forest for trees. So in this post, I'll be taking the proof (taken from <a href="https://pi.math.cornell.edu/~hatcher/AT/AT.pdf">Allen Hatcher's</a> book) and explaining it in greater detail–primarily as a test of my understanding and communication abililties, but also in the hopes that someone else might find this helpful.</p>
 
 <p>Without further ado, I present to you the fundamental theorem of algebra.</p>
 
@@ -60,6 +60,8 @@ When I first read the proof, I was a little confused, mainly because I didn&#39;
 <p>From <span  class="math">\(|z^n| > (|a_1| + \cdots + |a_n|)|z^{n-1}|\)</span> it follows that the polynomial <span  class="math">\(p_t = z^n + t(a_1 z^{n-1} + \cdots + a_n)\)</span> has no roots on the circle <span  class="math">\(|z| = r\)</span> when <span  class="math">\(0 \leq t \leq 1\)</span>. Replacing <span  class="math">\(p\)</span> by <span  class="math">\(p_t\)</span> in the formula for <span  class="math">\(f_r\)</span> and letting <span  class="math">\(t\)</span> go from 1 to 0, we obtain a homotopy from the loop <span  class="math">\(f_r\)</span> to the loop <span  class="math">\(w_n (s) = e^{2\pi i n s}\)</span> (notice all the terms that disappear when this happens). Remembering that <span  class="math">\(w_n\)</span> represents <span  class="math">\(n\)</span> times a generator of the infinite cyclic group <span  class="math">\(\pi_1 (S^1)\)</span>. Since <span  class="math">\([w_n] = [f_r] = 0\)</span>, it must be the case that <span  class="math">\(n=0\)</span>. Thus, the  only polynomials without roots in <span  class="math">\(\mathbb{C}\)</span> are constant.</p>
 
 <p><span  class="math">\[\tag*{$\blacksquare$}\]</span></p>
+
+<p>The decision to define the value of <span  class="math">\(r\)</span> the way it was defined (larger than the sum of the magnitudes of the coefficients and larger than 1) may seem arbitrary, and in many ways, it is. From what I understand, it was defined that way solely to ensure that the inequalities above hold.</p>
 
 
         </main></body>
