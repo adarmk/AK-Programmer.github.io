@@ -19,7 +19,7 @@
       <guid>http://adarkahiri.com/solutions/hatcher-at/basic-constructions/</guid>
       <description>Problem 1
 Show that composition of paths satisfies the following cancellation property: If \(f_0 g_0 \simeq f_1 g_1\) and \(g_0 \simeq g_1\) then \(f_0 \simeq f_1\).
-We first show that \(f_0\) and \(f_1\) have the same endpoints. Since \(f_0 g_0 \simeq f_1 g_1\), \(f_0(0) = f_1(0)\). Since \(g_0 \simeq g_1\), \(g_0(0) = g_1(0)\), and since we&#39;re dealing with path compositions, we know that \(f_0(1) = g_0(0)\) and \(f_1(1) = g_1(0)\), which means \(f_0(1) = f_1(1)\).</description>
+Proof. We first show that \(f_0\) and \(f_1\) have the same endpoints. Since \(f_0 g_0 \simeq f_1 g_1\), \(f_0(0) = f_1(0)\). Since \(g_0 \simeq g_1\), \(g_0(0) = g_1(0)\), and since we&#39;re dealing with path compositions, we know that \(f_0(1) = g_0(0)\) and \(f_1(1) = g_1(0)\), which means \(f_0(1) = f_1(1)\).</description>
     </item>
     
     <item>
