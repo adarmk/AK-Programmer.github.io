@@ -52,7 +52,7 @@ Show that for a space <span  class="math">\(X\)</span>, the following three cond
 <li><span  class="math">\(\pi_1 (X, x_0) = 0\)</span> for all <span  class="math">\(x_0 \in X\)</span>.</li>
 </ol>
 
-<p><em>Proof.</em> We show that <span  class="math">\(1 \implies 2, 1 \implies 3\)</span>, and <span  class="math">\(3 \implies 1\)</span>.</p>
+<p><em>Proof.</em> We show that <span  class="math">\(1 \implies 2, 2 \implies 1, 1 \implies 3\)</span>, and <span  class="math">\(3 \implies 1\)</span>.</p>
 
 <p><span  class="math">\(1 \implies 2\)</span>. Given the map <span  class="math">\(f: S^1 \to X\)</span>, our desired extended map is the composition of <span  class="math">\(h_t: S^1 \to X\)</span> with a map <span  class="math">\(g: D^2 \to S^1 \times I\)</span>,
 where <span  class="math">\(h_0 = f\)</span> and <span  class="math">\(h_1\)</span> is the constant map. The map <span  class="math">\(g: D^2 \to S^1 \times I\)</span> can be defined like so (so that it is continuous and bijective):</p>
@@ -61,15 +61,23 @@ where <span  class="math">\(h_0 = f\)</span> and <span  class="math">\(h_1\)</sp
 
 <p>for <span  class="math">\(0 \leq r < 1\)</span> and <span  class="math">\(0 \leq \theta \leq 2 \pi\)</span> where <span  class="math">\(r\)</span> is the point's distance from the disk's center, and <span  class="math">\(\theta\)</span> is its angle from 0 on a circle with radius <span  class="math">\(r\)</span>.</p>
 
-<p>As might have notice, this map can't be defined bijectively  for <span  class="math">\((S^1, 1)\)</span> since a point (in this case the center of the disk) can't map to more than one point. But since <span  class="math">\(h_1\)</span> is the constant map, we can simply define <span  class="math">\(hg\)</span> so that the center of the disk maps to the image of <span  class="math">\(h_1\)</span>, and now we have ourselves a unique extension of <span  class="math">\(f\)</span>.</p>
+<p>As might have noticed, this map can't be defined bijectively for <span  class="math">\((S^1, 1)\)</span> since a point (in this case the center of the disk) can't map to more than one point. But since <span  class="math">\(h_1\)</span> is the constant map, we can simply extend <span  class="math">\(hg\)</span> so that the center of the disk maps to the image of <span  class="math">\(h_1\)</span>, and now we have ourselves an extension of <span  class="math">\(f\)</span>.</p>
 
-<p>If it isn't intuitively clear why (1) is true, consider a homotopy <span  class="math">\(h_t\)</span> from a loop to a constant map. Now, instead of thinking of this homotopy as 'continuously deforming' a loop to a point, imagine all of the loops in the family <span  class="math">\(h_t\)</span> imbedded in <span  class="math">\(X\)</span> (which can be any surface, but for simplicity we'll say it is a sphere) at once. It should a little clearer how 'combining' all of the loops in <span  class="math">\(h_t\)</span> gives the image of a disk.</p>
+<p>If it isn't intuitively clear why (1) is true, consider a homotopy <span  class="math">\(h_t\)</span> from a loop to a constant map. Now, instead of thinking of this homotopy as 'continuously deforming' a loop to a point, imagine all of the loops in the family <span  class="math">\(h_t\)</span> imbedded in <span  class="math">\(X\)</span> (which can a number of spaces, but for simplicity we'll say it is a sphere) at once. It should a little clearer how 'combining' all of the loops in <span  class="math">\(h_t\)</span> gives the image of a disk.</p>
+
+<p><br></p>
+
+<p><span  class="math">\(2 \implies 1\)</span>. Here we pretty much do the opposite of what we did above. We define a map <span  class="math">\(g: S^1 \times I \to D^2\)</span> like so:</p>
+
+<p><span  class="math">\[g: (\cos \theta, \sin \theta, r) \to ((1-r)\cos \theta, (1-r)\sin \theta)\]</span></p>
+
+<p>and we compose with our extended map <span  class="math">\(D^2 \to X\)</span> to get our desired homotopy. Unlike how we defined <span  class="math">\(g\)</span> previously, here it is bijective without redefining it any further.</p>
 
 <p><br>
 <span  class="math">\(1 \implies 3\)</span>. If every map <span  class="math">\(S^1 \to X\)</span> is nullhomotopic, then every such map is homotopic to every other such map by transitivity (assuming <span  class="math">\(X\)</span> is path-connected), meaning there is only one homotopy class in <span  class="math">\(X\)</span>. This is what it means for the fundamental group of a space to be zero.</p>
 
 <p><br>
-<span  class="math">\(3 \implies 1\)</span>. If the fundamental group of <span  class="math">\(X\)</span> is zero, then there is one and only one homotopy class. The constant path must be in this homotopy class, for if it isn't, there would be another homotopy class for the constant path, leaving us with two homotopy classes total, which is a contradiction. Every loop is therefore nullhomotopic.
+<span  class="math">\(3 \implies 1\)</span>. If the fundamental group of <span  class="math">\(X\)</span> is zero, then there is one and only one homotopy class. The constant path must be in this homotopy class, for if it isn't, there would be another homotopy class containing it, leaving us with two homotopy classes total, which is a contradiction. Every loop is therefore homotopic to a constant path.
 <span  class="math">\(\tag*{$\blacksquare$}\)</span>
 <br><br></p>
 
