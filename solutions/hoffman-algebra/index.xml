@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linear Algebra by Kenneth Hoffman &amp; Ray Kunze on Adar Kahiri</title>
+    <link>http://adarkahiri.com/solutions/hoffman-algebra/</link>
+    <description>Recent content in Linear Algebra by Kenneth Hoffman &amp; Ray Kunze on Adar Kahiri</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 Dec 2020 15:51:48 -0500</lastBuildDate>
+    
+	<atom:link href="http://adarkahiri.com/solutions/hoffman-algebra/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Matrix Multplication</title>
+      <link>http://adarkahiri.com/solutions/hoffman-algebra/mmult/</link>
+      <pubDate>Wed, 09 Dec 2020 22:29:02 -0500</pubDate>
+      
+      <guid>http://adarkahiri.com/solutions/hoffman-algebra/mmult/</guid>
+      <description>Theorem. Let \(e\) be an elementary row operation and let \(E\) be the \( m \times m\) elementary matrix \(E = e(I)\). Then, for every \(m \times n\) matrix \(A\),
+\[e(A) = EA\]
+Proof. We prove this for each of the three elementary row operations separately.
+Swap: If \(e\) &#39;swaps&#39; rows \(s\) and \(r\) of \(A\), then
+\[e(A)_{ij} = \begin{cases} A_{ij} \quad \text{if } s \neq i \neq r \\ A_{sj} \quad \text{if } i = r \\ A_{rj} \quad \text{if } i = s \end{cases}\]</description>
+    </item>
+    
+  </channel>
+</rss>

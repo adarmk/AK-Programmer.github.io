@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Theorem. Let \(e\) be an elementary row operation and let \(E\) be the \( m \times m\) elementary matrix \(E = e(I)\). Then, for every \(m \times n\) matrix \(A\),
+\[e(A) = EA\]
+Proof. We prove this for each of the three elementary row operations separately.
+Swap: If \(e\) &#39;swaps&#39; rows \(s\) and \(r\) of \(A\), then
+\[e(A)_{ij} = \begin{cases} A_{ij} \quad \text{if } s \neq i \neq r \\ A_{sj} \quad \text{if } i = r \\ A_{rj} \quad \text{if } i = s \end{cases}\] ">
+
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+
+    
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+    
+    <title>Adar Kahiri | Matrix Multplication</title>
+</head><body><h1 style="margin-bottom: 10px;">Adar Kahiri</h1>
+    
+    <nav>
+        
+            <a class="nav-item" href="/"><b>About</b></a>
+        
+            <a class="nav-item" href="/blog/"><b>Blog</b></a>
+        
+    </nav><main id="content">
+    
+        <h2 class="blog-title">Matrix Multplication</h2>
+<p class="date">December 2020</p>
+
+    
+    <p><strong>Theorem.</strong> Let <span  class="math">\(e\)</span> be an elementary row operation and let <span  class="math">\(E\)</span> be the <span  class="math">\( m \times m\)</span> elementary matrix <span  class="math">\(E = e(I)\)</span>. Then, for every <span  class="math">\(m \times n\)</span> matrix <span  class="math">\(A\)</span>,</p>
+
+<p><span  class="math">\[e(A) = EA\]</span></p>
+
+<p><em>Proof.</em> We prove this for each of the three elementary row operations separately.</p>
+
+<p><strong>Swap:</strong> If <span  class="math">\(e\)</span> 'swaps' rows <span  class="math">\(s\)</span> and <span  class="math">\(r\)</span> of <span  class="math">\(A\)</span>, then</p>
+
+<p><span  class="math">\[e(A)_{ij} = \begin{cases} A_{ij} \quad \text{if } s \neq i \neq r   \\ A_{sj} \quad \text{if } i = r \\ A_{rj} \quad \text{if } i = s \end{cases}\]</span></p>
+
+<p>and</p>
+
+<p><span  class="math">\[ EA_{ij} = e(I)A_{ij} = \sum\limits_{k=1}^{m} e(I)_{ik}A_{kj}.\]</span></p>
+
+<p>Noting that the same row operation as before is being applied to <span  class="math">\(I\)</span>, we can equivalently define this matrix as follows:</p>
+
+<p><span  class="math">\[ e(I)A_{ij} = \begin{cases} \sum\limits_{k=1}^{m} I_{ik}A_{kj} \quad \text{if } s \neq i \neq r   \\ \sum\limits_{k=1}^{m} I_{sk}A_{kj} \quad \text{if } i = r \\ \sum\limits_{k=1}^{m} I_{rk}A_{kj} \quad \text{if } i = s \end{cases}\]</span></p>
+
+<p>We can now simplify each of these cases. For the first case, since <span  class="math">\(I_{ik} = 0\)</span> for all but the <span  class="math">\(i\)</span>-th column, the only non-zero term in the sum will be <span  class="math">\(I_{ii}A_{ij} = A_{ij}\)</span>. For the second case, the only non-zero term in the sum will be <span  class="math">\(I_{ss}A_{sj} = A_{sj}\)</span> and for the third case the only non-zero term in the same will be <span  class="math">\(I_{rr}A_{rj} = A_{rj}\)</span>.</p>
+
+<p><br></p>
+
+<p><strong>Scale:</strong> If <span  class="math">\(e\)</span> scales some row <span  class="math">\(r\)</span> by some scalar <span  class="math">\(c\)</span>, then</p>
+
+<p><span  class="math">\[e(A)_{ij} = \begin{cases} A_{ij} \quad \text{if } i \neq r  \\ cA_{rj} \quad \text{if } i = r \end{cases}\]</span></p>
+
+<p>and</p>
+
+<p><span  class="math">\[ EA_{ij} = e(I)A_{ij} = \sum\limits_{k=1}^{m} e(I)_{ik}A_{kj}.\]</span></p>
+
+<p>Noting that the same row operation as before is being applied to <span  class="math">\(I\)</span>, we can equivalently define this matrix as follows:</p>
+
+<p><span  class="math">\[ e(I)A_{ij} = \begin{cases} \sum\limits_{k=1}^{m} I_{ik}A_{kj} \quad \text{if } s \neq i \neq r   \\ \sum\limits_{k=1}^{m} c I_{rk}A_{kj} \quad \text{if } i = r \end{cases}\]</span></p>
+
+<p>We've already seen why the first case simplifies to <span  class="math">\(A_{ij}\)</span>, and for identical reasons the second case simplifies to  <span  class="math">\(c A_{rj}\)</span>.</p>
+
+<p><br></p>
+
+<p><strong>Add a scaled row to another row:</strong> If <span  class="math">\(e\)</span> scales adds row <span  class="math">\(s\)</span> of the matrix, scaled by a scalar <span  class="math">\(c\)</span>, to another row <span  class="math">\(r\)</span> (where <span  class="math">\(r \neq s\)</span>), then</p>
+
+<p><span  class="math">\[e(A)_{ij} = \begin{cases} A_{ij} \quad \text{if } i \neq r  \\ A_{rj} + cA_{sj} \quad \text{if } i = r \end{cases}\]</span></p>
+
+<p>and</p>
+
+<p><span  class="math">\[ EA_{ij} = e(I)A_{ij} = \sum\limits_{k=1}^{m} e(I)_{ik}A_{kj}.\]</span></p>
+
+<p>If <span  class="math">\(i \neq r\)</span>, then <span  class="math">\(e(I)A_{ij} = A_{ij}\)</span>, as we have shown before. If <span  class="math">\( i = r \)</span>, then the only non-zero terms of the sum above are <span  class="math">\(e(I)_{rr}A_{rj}\)</span> and <span  class="math">\(e(I)_{rs}A_{sj}\)</span>. Since <span  class="math">\(I_{ss} = 1\)</span> and <span  class="math">\(e(I)_{rs} = cI_{ss}\)</span>, <span  class="math">\(e(I)_{rs} = c\)</span>. Then the value of the sum above if <span  class="math">\(i=r\)</span> is <span  class="math">\(A_{rj} + cA_{sj}\)</span>.</p>
+
+
+        </main></body>
+</html>
