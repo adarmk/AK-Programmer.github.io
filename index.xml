@@ -6,10 +6,16 @@
     <description>Recent content in About on Adar Kahiri</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Aug 2020 12:55:11 -0400</lastBuildDate>
-    
-	<atom:link href="http://adarkahiri.com/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Mon, 17 Aug 2020 12:55:11 -0400</lastBuildDate><atom:link href="http://adarkahiri.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hash Functions For The Technical Layman</title>
+      <link>http://adarkahiri.com/blog/hash/</link>
+      <pubDate>Wed, 16 Dec 2020 14:43:22 -0500</pubDate>
+      
+      <guid>http://adarkahiri.com/blog/hash/</guid>
+      <description>Recently, I became interested in cryptographic hash functions. To my surprise, I couldn&#39;t find any good, comprehensive resources online explaining exactly how they work, and so I had to look through dozens of articles, textbooks, and papers to get just a fraction of the level of understanding I wanted. I figured I&#39;d write this post to save others interested in hash functions the trouble of doing what I did.
+In terms of prerequisites, besides basic programming knowledge, you should know what bit-wise operators are.</description>
+    </item>
     
     <item>
       <title>Invertible Matrices</title>
@@ -72,7 +78,7 @@ When I first read the proof, I was a little confused, mainly because I didn&#39;
       
       <guid>http://adarkahiri.com/lib/</guid>
       <description>A collection of writing I think is worth reading.
-Books  Man&amp;rsquo;s Search For Meaning The Humans The Ghost in the Wires The Nazi Hunters 1984 Einstein: His Life and Universe Surely You&amp;rsquo;re Joking Mr. Feynman  Poems &amp;amp; Songs  &amp;lsquo;Wernher Von Braun&amp;rsquo; by Tom Lehrer &amp;lsquo;Do not go gentle into that good night&amp;rsquo; by Dylan Thomas  Essays, Blog Posts, etc.  &amp;lsquo;A Mathematician&amp;rsquo;s Lament&amp;rsquo; by Paul Lockhart &amp;lsquo;Industrial Society And Its Future&amp;rsquo; by Ted Kaczynski  Textbooks  Topology - Munkres A Book of Abstract Algebra - Pinter Linear Algebra - Hofman &amp;amp; Kunz Linear Algebra Done Right - Axler Real Analysis - Pugh The Machinery of Life - Goodsell Introduction to Modern Cryptography - Katz &amp;amp; Lindell  </description>
+Books  Man&amp;rsquo;s Search For Meaning The Humans The Ghost in the Wires The Nazi Hunters 1984 Einstein: His Life and Universe Surely You&amp;rsquo;re Joking Mr. Feynman  Poems &amp;amp; Songs  &amp;lsquo;Wernher Von Braun&amp;rsquo; by Tom Lehrer &amp;lsquo;Do not go gentle into that good night&amp;rsquo; by Dylan Thomas  Essays, Blog Posts, etc.  &amp;lsquo;A Mathematician&amp;rsquo;s Lament&amp;rsquo; by Paul Lockhart &amp;lsquo;Industrial Society And Its Future&amp;rsquo; by Ted Kaczynski  Textbooks  Topology - Munkres A Book of Abstract Algebra - Pinter Linear Algebra - Hoffman &amp;amp; Kunz Real Analysis - Pugh The Machinery of Life - Goodsell Introduction to Modern Cryptography - Katz &amp;amp; Lindell  </description>
     </item>
     
     <item>

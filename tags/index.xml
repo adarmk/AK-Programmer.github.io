@@ -5,10 +5,6 @@
     <link>http://adarkahiri.com/tags/</link>
     <description>Recent content in Tags on Adar Kahiri</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="http://adarkahiri.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="http://adarkahiri.com/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

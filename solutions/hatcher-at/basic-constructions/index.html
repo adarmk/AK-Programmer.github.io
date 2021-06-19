@@ -59,11 +59,12 @@ where <span  class="math">\(h_0 = f\)</span> and <span  class="math">\(h_1\)</sp
 
 <p><span  class="math">\[g: ((1-r)\cos \theta, (1-r)\sin \theta) \to (\cos \theta, \sin \theta, r)\]</span></p>
 
-<p>for <span  class="math">\(0 \leq r < 1\)</span> and <span  class="math">\(0 \leq \theta \leq 2 \pi\)</span> where <span  class="math">\(r\)</span> is the point's distance from the disk's center, and <span  class="math">\(\theta\)</span> is its angle from 0 on a circle with radius <span  class="math">\(r\)</span>.</p>
+<p>for <span  class="math">\(0 \leq r \leq 1\)</span> and <span  class="math">\(0 \leq \theta \leq 2 \pi\)</span> where <span  class="math">\(r\)</span> is the point's distance from the disk's center, and <span  class="math">\(\theta\)</span> is its angle from 0 on a circle with radius <span  class="math">\(r\)</span>.</p>
 
-<p>As might have noticed, this map can't be defined bijectively for <span  class="math">\((S^1, 1)\)</span> since a point (in this case the center of the disk) can't map to more than one point. But since <span  class="math">\(h_1\)</span> is the constant map, we can simply extend <span  class="math">\(hg\)</span> so that the center of the disk maps to the image of <span  class="math">\(h_1\)</span>, and now we have ourselves an extension of <span  class="math">\(f\)</span>.</p>
+<p>As might have noticed, this map can only be defined bijectively for <span  class="math">\((S^1, 1)\)</span>
+if <span  class="math">\(f\)</span> is nullhomotopic (homotopic to the constant map), for if it weren't nullhomotopic, then for any homotopy <span  class="math">\(h_t\)</span> of <span  class="math">\(f\)</span>, the image of <span  class="math">\(h_1\)</span> would have more than one point, whereas the preimage of <span  class="math">\(g\)</span> would have only one point.</p>
 
-<p>If it isn't intuitively clear why (1) is true, consider a homotopy <span  class="math">\(h_t\)</span> from a loop to a constant map. Now, instead of thinking of this homotopy as 'continuously deforming' a loop to a point, imagine all of the loops in the family <span  class="math">\(h_t\)</span> imbedded in <span  class="math">\(X\)</span> (which can a number of spaces, but for simplicity we'll say it is a sphere) at once. It should a little clearer how 'combining' all of the loops in <span  class="math">\(h_t\)</span> gives the image of a disk.</p>
+<p>If it isn't intuitively clear why this is true, consider a homotopy <span  class="math">\(h_t\)</span> from a loop to a constant map. Now, instead of thinking of this homotopy as 'continuously deforming' a loop to a point, imagine all of the loops in the family <span  class="math">\(h_t\)</span> imbedded in <span  class="math">\(X\)</span> (which can a number of spaces, but for simplicity we'll say it is a sphere) at once. It should a little clearer how 'combining' all of the loops in <span  class="math">\(h_t\)</span> gives the image of a disk.</p>
 
 <p><br></p>
 
@@ -71,13 +72,13 @@ where <span  class="math">\(h_0 = f\)</span> and <span  class="math">\(h_1\)</sp
 
 <p><span  class="math">\[g: (\cos \theta, \sin \theta, r) \to ((1-r)\cos \theta, (1-r)\sin \theta)\]</span></p>
 
-<p>and we compose it with our extended map <span  class="math">\(D^2 \to X\)</span> to get our desired homotopy. Unlike how we defined <span  class="math">\(g\)</span> previously, here it is bijective without redefining it any further.</p>
+<p>and we compose it with our extended map <span  class="math">\(D^2 \to X\)</span> to get our desired homotopy.</p>
 
 <p><br>
 <span  class="math">\(1 \implies 3\)</span>. If every map <span  class="math">\(S^1 \to X\)</span> is nullhomotopic, then every such map is homotopic to every other such map by transitivity, meaning there is only one homotopy class in <span  class="math">\(X\)</span>. This is what it means for the fundamental group of a space to be zero.</p>
 
 <p><br>
-<span  class="math">\(3 \implies 1\)</span>. If the fundamental group of <span  class="math">\(X\)</span> is zero, then there is one and only one homotopy class. The constant path must be in this homotopy class, for if it isn't, there would be another homotopy class containing it, leaving us with two homotopy classes total, which is a contradiction. Every loop is therefore homotopic to a constant path.
+<span  class="math">\(3 \implies 1\)</span>. If the fundamental group of <span  class="math">\(X\)</span> is zero, then there iss only one homotopy class. The constant path must be in this homotopy class, for if it isn't, there would be another homotopy class containing it, leaving us with two homotopy classes total, which is a contradiction. Every loop is therefore homotopic to a constant path.
 <span  class="math">\(\tag*{$\blacksquare$}\)</span>
 <br><br></p>
 
